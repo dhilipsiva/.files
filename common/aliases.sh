@@ -30,6 +30,12 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
+LS_COLORS=$(ls_colors_generator)
+
+run_ls() {
+	ls-i $colorflag -w $(tput cols) "$@"
+}
+
 # List all files colorized in long format
 alias l="ls -F ${colorflag}"
 
@@ -39,8 +45,8 @@ alias la="ls -aF ${colorflag}"
 # List only directories
 alias lsd="ls -F ${colorflag} | grep --color=never '^d'"
 
-# Always use color output for `ls`
-alias ls="command ls ${colorflag}"
+
+alias ls="run_ls"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
