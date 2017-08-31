@@ -47,12 +47,24 @@ Plug 'yalesov/vim-emblem'
 " Initialize plugin system
 call plug#end()
 
-" Declarations
+" Declarations\
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
-let g:NERDSpaceDelims = 1 " Add space oftter comment delimiter
+let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
 let g:airline_powerline_fonts = 1 " Vim devicons for powerline
 let g:deoplete#enable_at_startup= 1 " Start deoplete at startup
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
 let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
 let g:sneak#label = 1 " Show labels while using sneak
 
