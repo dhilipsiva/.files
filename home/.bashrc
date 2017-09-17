@@ -1,6 +1,6 @@
 source ~/.files/common/profile.sh
 if [ "$(uname)" == "Darwin" ]; then
-    echo "blah"
+    source ~/.files/macOS/profile.sh
 else
     source ~/.files/linux/profile.sh
 fi
@@ -12,4 +12,3 @@ PERL_MB_OPT="--install_base \"/home/dhilipsiva/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/dhilipsiva/perl5"; export PERL_MM_OPT;
 
 eval "$(_TMUXP_COMPLETE=source tmuxp)"
-
