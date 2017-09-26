@@ -72,6 +72,7 @@ set conceallevel=1
 set encoding=utf8
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 set number
+set smartcase
 
 colorscheme onedark
 nmap <F8> :TagbarToggle<CR>
