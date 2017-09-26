@@ -10,7 +10,8 @@ alias b="brew"
 alias d="docker"
 alias dc="docker-compose"
 alias dm="docker-machine"
-alias e="ember"
+alias e="nvim"
+alias em="ember"
 alias f="fuck"
 alias g="git"
 alias h="history"
@@ -19,8 +20,8 @@ alias p="python"
 alias q="exit"
 alias r="rails"
 alias s="scheme"
-alias t="date"
 alias shba="sudo hostscli block_all"
+alias t="date"
 
 
 # Detect which `ls` flavor is in use
@@ -97,7 +98,6 @@ done
 
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
-
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
