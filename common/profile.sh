@@ -62,3 +62,11 @@ _fzf_compgen_path() {
 
 complete -F _fzf_path_completion -o default -o bashdefault ag
 complete -F _fzf_dir_completion -o default -o bashdefault tree
+
+function _update_ps1() {
+    PS1="$(powerline-shell $?)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
