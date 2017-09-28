@@ -6,5 +6,6 @@
 # Distributed under terms of the MIT license.
 #
 
-
-echo "Set Up on MacOS"
+source ~/.files/macOS/exports.sh
+source ~/.files/macOS/aliases.sh
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion

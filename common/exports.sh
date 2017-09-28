@@ -11,3 +11,6 @@ export XDG_CONFIG_HOME=$DOTFILES_DIR/.config
 
 # 2dn Degree Derivatives (Depends on 1st Degree variables)
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
+
+
+# export PYTHONVERBOSE=true

@@ -31,7 +31,7 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
-LS_COLORS=$(ls_colors_generator)
+# LS_COLORS=$(ls_colors_generator)
 
 run_ls() {
 	ls-i $colorflag -w $(tput cols) "$@"
