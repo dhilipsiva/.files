@@ -1,7 +1,7 @@
 # independant vars (Depends on static and builtins)
 export DOTFILES_DIR=$HOME/.files
 export EDITOR='nvim'
-export GOPATH=~/go/
+export GOPATH=~/go
 export PATH=/usr/local/bin:$PATH
 
 # 1st Degree Derivatives (Depends only on Independant vars)
