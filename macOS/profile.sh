@@ -8,4 +8,5 @@
 
 source ~/.files/macOS/exports.sh
 source ~/.files/macOS/aliases.sh
+source ~/.files/macOS/functions.sh
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
