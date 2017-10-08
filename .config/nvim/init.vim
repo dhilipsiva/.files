@@ -30,7 +30,6 @@ Plug 'nvie/vim-flake8'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
-Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
@@ -67,6 +66,7 @@ let g:javascript_conceal_this                 = "@"
 let g:javascript_conceal_undefined            = "¿"
 let g:javascript_conceal_underscore_arrow_function = "🞅"
 let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
+let g:ropevim_vim_completion=1
 let g:sneak#label = 1 " Show labels while using sneak
 
 set conceallevel=1
@@ -78,3 +78,4 @@ set smartcase
 colorscheme onedark
 nmap <F8> :TagbarToggle<CR>
 syntax on
+autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
