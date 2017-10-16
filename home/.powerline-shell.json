@@ -6,8 +6,8 @@
     "git",
     "hg",
     "jobs",
-    "root",
-    "newline"
+    "newline",
+    "root"
   ],
   "cwd": {
     "mode": "dironly"
