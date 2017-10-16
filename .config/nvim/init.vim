@@ -1,3 +1,35 @@
+" Declarations\
+let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
+let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
+let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
+let g:airline_powerline_fonts = 1 " Vim devicons for powerline
+let g:deoplete#enable_at_startup= 1 " Start deoplete at startup
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
+let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
+let g:ropevim_vim_completion=1
+let g:sneak#label = 1 " Show labels while using sneak
+
+set conceallevel=1
+set encoding=utf8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+set number
+set smartcase
+
+nmap <F8> :TagbarToggle<CR>
+syntax on
+autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
+
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
@@ -35,6 +67,7 @@ Plug 'othree/html5.vim'
 Plug 'othree/xml.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
+Plug 'python-mode/python-mode'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
@@ -55,35 +88,6 @@ Plug 'yalesov/vim-emblem'
 " Initialize plugin system
 call plug#end()
 
-" Declarations\
-let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
-let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
-let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
-let g:airline_powerline_fonts = 1 " Vim devicons for powerline
-let g:deoplete#enable_at_startup= 1 " Start deoplete at startup
-let g:javascript_conceal_NaN                  = "ℕ"
-let g:javascript_conceal_arrow_function       = "⇒"
-let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_noarg_arrow_function = "🞅"
-let g:javascript_conceal_null                 = "ø"
-let g:javascript_conceal_prototype            = "¶"
-let g:javascript_conceal_return               = "⇚"
-let g:javascript_conceal_static               = "•"
-let g:javascript_conceal_super                = "Ω"
-let g:javascript_conceal_this                 = "@"
-let g:javascript_conceal_undefined            = "¿"
-let g:javascript_conceal_underscore_arrow_function = "🞅"
-let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
-let g:ropevim_vim_completion=1
-let g:sneak#label = 1 " Show labels while using sneak
 
-set conceallevel=1
-set encoding=utf8
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
-set number
-set smartcase
-
+" Post Plugin stuff
 colorscheme onedark
-nmap <F8> :TagbarToggle<CR>
-syntax on
-autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
