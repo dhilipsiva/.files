@@ -25,8 +25,8 @@ let g:sneak#label = 1 " Show labels while using sneak
 set conceallevel=1
 set encoding=utf8
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+set ignorecase smartcase
 set number
-set smartcase
 
 nmap <F8> :TagbarToggle<CR>
 syntax on
