@@ -17,6 +17,8 @@ let g:javascript_conceal_this                 = "@"
 let g:javascript_conceal_undefined            = "¿"
 let g:javascript_conceal_underscore_arrow_function = "🞅"
 let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
+let g:pymode_virtualenv = 1
 let g:ropevim_vim_completion=1
 let g:sneak#label = 1 " Show labels while using sneak
 
