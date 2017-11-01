@@ -49,3 +49,4 @@ db.sqlite3
 node_modules/
 no-git-conf/
 .ropeproject/
+dump.rdb
