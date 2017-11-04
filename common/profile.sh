@@ -1,4 +1,3 @@
-eval $(ssh-agent)
 source ~/.files/common/exports.sh
 source ~/.files/common/aliases.sh
 source ~/.files/common/functions.sh
