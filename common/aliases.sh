@@ -22,6 +22,7 @@ alias r="rails"
 alias s="scheme"
 alias shba="sudo hostscli block_all"
 alias t="date"
+alias clear="echo use ctrl+l :P"
 
 
 # Detect which `ls` flavor is in use
