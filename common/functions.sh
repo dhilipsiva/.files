@@ -35,3 +35,8 @@ function fix-git {
     git gc --prune=now
     git remote prune origin
 }
+
+function keys {
+	ssh-add ~/.ssh/google_compute_engine
+	ssh-add ~/.ssh/id_rsa
+}
