@@ -42,9 +42,9 @@ complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
 
 complete -F _docker d
 
-complete -F _docker-machine dm
+complete -F _docker_machine dm
 
-complete -F _docker-compose dc
+complete -F _docker_compose dc
 
 # Use ~~ as the trigger sequence instead of the default **
 export FZF_COMPLETION_TRIGGER='~~'
@@ -69,4 +69,13 @@ function _update_ps1() {
 
 if [ "$TERM" != "linux" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
+# USER_BIN is declared in common/exports.sh
+GCLOUD_DIR=$USER_BIN/google-cloud-sdk
+if [ -d "$GCLOUD_DIR" ]; then
+	. $GCLOUD_DIR/completion.bash.inc
+	. $GCLOUD_DIR/path.bash.inc
+else
+	echo "Cloud SDK dir does not exist: $GCLOUD_DIR"
 fi

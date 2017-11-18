@@ -2,6 +2,8 @@
 export DOTFILES_DIR=$HOME/.files
 export EDITOR='nvim'
 export GOPATH=~/go
+export USER_BIN=$HOME/bin
+export PATH=$USER_BIN:$PATH
 export PATH=/usr/local/bin:$PATH
 
 # 1st Degree Derivatives (Depends only on Independant vars)
