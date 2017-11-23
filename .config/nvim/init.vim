@@ -31,6 +31,8 @@ set number
 nmap <F8> :TagbarToggle<CR>
 syntax on
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
+autocmd BufNewFile,BufRead Pipfile set filetype=toml
+
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -41,6 +43,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-gitgutter'
 Plug 'brooth/far.vim'
+Plug 'cespare/vim-toml'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dsawardekar/ember.vim'
 Plug 'editorconfig/editorconfig-vim'
