@@ -102,3 +102,4 @@ ENV/
 
 .config
 .tmuxp/aircto.json
+.env
