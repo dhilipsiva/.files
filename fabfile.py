@@ -49,7 +49,7 @@ def setup():
             run("cp home/.* ~")
     run("brew install gcc")
     run("brew install ruby")
-    run("brew install python3 neovim bash")
+    run("brew install python3 neovim bash bash-completion@2 git")
     run("pip3 install tmuxp powerline-shell pwdman hostscli neovim pipenv")
     sudo("hostscli block_all")
     require.files.directories([tmp_dir])
