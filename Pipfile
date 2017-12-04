@@ -12,6 +12,8 @@ fabtools = "*"
 neovim = "*"
 ipython = "*"
 gitric = "*"
+ipaddress = "*"
+"enum34" = "*"
 
 
 [dev-packages]
