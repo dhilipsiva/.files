@@ -50,7 +50,7 @@ def setup():
     run("brew install gcc")
     run("brew install ruby")
     run("brew install python3 neovim bash")
-    run("pip3 install tmuxp powerline-shell pwdman hostscli neovim")
+    run("pip3 install tmuxp powerline-shell pwdman hostscli neovim pipenv")
     sudo("hostscli block_all")
     require.files.directories([tmp_dir])
     with cd(tmp_dir):
