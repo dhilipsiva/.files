@@ -22,17 +22,27 @@ let g:pymode_virtualenv = 1
 let g:ropevim_vim_completion=1
 let g:sneak#label = 1 " Show labels while using sneak
 
-set conceallevel=1
-set encoding=utf8
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
-set ignorecase smartcase
-set number
-
 nmap <F8> :TagbarToggle<CR>
 syntax on
-autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
-autocmd BufNewFile,BufRead Pipfile set filetype=toml
 
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set colorcolumn=80
+set conceallevel=1
+set encoding=utf8
+set ignorecase smartcase
+set number
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_components/*
+
+autocmd BufNewFile,BufRead *.cap   set syntax=ruby
+autocmd BufNewFile,BufRead Pipfile set filetype=toml
+autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
+
+au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss.*.scm setl tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.emblem,*.haml,*.py,*.coffee,*.jade set foldmethod=indent
+au BufNewFile,BufReadPost *.html,*.c setl tabstop=4 shiftwidth=4 expandtab
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
