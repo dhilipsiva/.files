@@ -9,6 +9,7 @@ function search {
         --exclude-dir="dist" \
         --exclude-dir="tmp" \
         --exclude-dir=".sass-cache" \
+        --exclude-dir=".cache-loader" \
         --exclude-dir="Appknox" \
         --exclude-dir="build" \
         --exclude-dir="uploads" \
