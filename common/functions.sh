@@ -13,6 +13,7 @@ function search {
         --exclude-dir="Appknox" \
         --exclude-dir="build" \
         --exclude-dir="uploads" \
+        --exclude-dir=".ropeproject" \
         --color "$*" .
 }
 
