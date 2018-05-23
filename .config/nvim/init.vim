@@ -91,6 +91,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'vimwiki/vimwiki'
+Plug 'wakatime/vim-wakatime'
 Plug 'yalesov/vim-emblem'
 
 " Trigger configuration (Optional)
