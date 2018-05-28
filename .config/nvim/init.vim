@@ -8,8 +8,10 @@ let g:deoplete#enable_at_startup= 1 " Start deoplete at startup
 let g:jsx_ext_required = 0
 let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
 let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
+let g:pymode_rope = 0
+let g:pymode_rope_lookup_project = 0
 let g:pymode_virtualenv = 1
-let g:ropevim_vim_completion=1
+let g:ropevim_vim_completion=0
 let g:sneak#label = 1 " Show labels while using sneak
 
 nmap <F8> :TagbarToggle<CR>
