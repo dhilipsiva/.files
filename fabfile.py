@@ -38,7 +38,7 @@ def setup_gui():
 def setup():
     deb.update_index()
     deb.upgrade()
-    require.deb.packages(["build-essential", "python-pip", "unzip", "xclip", "tmux"])
+    require.deb.packages(["build-essential", "python-pip", "unzip", "xclip", "tmux", "git"])
     run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"')  # NOQA
     sudo("pip install -U pip")
     sudo("pip install powerline-shell tmuxp")
