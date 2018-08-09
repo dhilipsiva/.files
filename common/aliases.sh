@@ -96,4 +96,4 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-alias v="amixer sset 'Master'"
+alias v="amixer sset 'IEC958' volume"

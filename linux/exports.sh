@@ -1,4 +1,3 @@
-export ANDROID_HOME=/home/linuxbrew/.linuxbrew/opt/android-sdk
 export GDK_PIXBUF_MODULEDIR="/home/linuxbrew/.linuxbrew/lib/gdk-pixbuf-2.0/2.10.0/loaders"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 export LANG=en_US.utf8
