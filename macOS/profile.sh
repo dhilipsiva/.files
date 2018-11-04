@@ -1,7 +1,7 @@
 #! /bin/bash
 #
 # profile.sh
-# Copyright (C) 2017 dhilipsiva <dhilipsiva@gmail.com>
+# Copyright (C) 2017 dhilipsiva <dhilipsiva@pm.me>
 #
 # Distributed under terms of the MIT license.
 #
