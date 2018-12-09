@@ -10,3 +10,4 @@ export PATH=$PATH:/home/linuxbrew/.linuxbrew/opt/go/libexec/bin
 export SHELL="/home/linuxbrew/.linuxbrew/bin/bash"
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/libs
+# alsactl -F restore
