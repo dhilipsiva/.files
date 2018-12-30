@@ -145,3 +145,5 @@
     autosquash = true
 [credential]
 	helper = store
+[http]
+	sslVerify = true
