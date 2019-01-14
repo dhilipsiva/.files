@@ -38,34 +38,19 @@ def setup_gui():
 def setup():
     deb.update_index()
     deb.upgrade()
-    require.deb.packages(["build-essential", "python-pip", "unzip", "xclip", "tmux", "git"])
+    require.deb.packages(["build-essential", "python-pip", "unzip", "xclip", "curl", "git"])
     run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"')  # NOQA
     sudo("pip install -U pip")
-    sudo("pip install powerline-shell tmuxp")
     run("touch private.sh")
     git_seed(dot_dir)
     git_reset(dot_dir)
     with cd(dot_dir):
         with settings(warn_only=True):
             run("cp home/.* ~")
-    run("brew install gcc")
-    run("brew install ruby")
-    run("brew install python3 neovim bash bash-completion@2 git")
-    run("pip3 install tmuxp powerline-shell pwdman hostscli neovim pipenv")
+    run("brew install gcc ruby curl python3 neovim bash bash-completion@2 git pipenv tmux")
+    run("pip3 install tmux powerline-shell pwdman hostscli neovim tmuxp")
     sudo("hostscli block_all")
     require.files.directories([tmp_dir])
-    with cd(tmp_dir):
-        # Setup Fonts
-        branch = "master"
-        gh = "https://github.com"
-        repos = ["powerline/fonts", "ryanoasis/nerd-fonts"]
-        repo_names = [r.split("/")[1] for r in repos]
-        for repo, repo_name in zip(repos, repo_names):
-            wget("%s/%s/archive/%s.zip -O %s.zip" % (
-                gh, repo, branch, repo_name))
-            run("unzip %s.zip" % repo_name)
-            with cd("%s-%s" % (repo_name, branch)):
-                with settings(warn_only=True):
-                    run("./install.sh")
+    # Setup Fonts
     run("curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim") # NOQA
     run('nvim -c "PlugInstall | q | q"')
