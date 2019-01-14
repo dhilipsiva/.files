@@ -4,7 +4,6 @@ export EDITOR='nvim'
 export GOPATH=~/go
 export USER_BIN=$HOME/bin
 export PATH=$USER_BIN:$PATH
-export PATH=/usr/local/bin:$PATH
 
 # 1st Degree Derivatives (Depends only on Independant vars)
 export PATH=$GOPATH/bin:$PATH
@@ -13,6 +12,5 @@ export XDG_CONFIG_HOME=$DOTFILES_DIR/.config
 
 # 2dn Degree Derivatives (Depends on 1st Degree variables)
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
-
 
 # export PYTHONVERBOSE=true
