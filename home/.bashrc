@@ -11,4 +11,5 @@ export PERL_LOCAL_LIB_ROOT="/home/dhilipsiva/perl5:$PERL_LOCAL_LIB_ROOT"
 export PERL_MB_OPT="--install_base \"/home/dhilipsiva/perl5\""
 export PERL_MM_OPT="INSTALL_BASE=/home/dhilipsiva/perl5"
 
-eval "$(_TMUXP_COMPLETE=source tmuxp)"
+# eval "$(_TMUXP_COMPLETE=source tmuxp)"
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
