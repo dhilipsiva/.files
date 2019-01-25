@@ -97,3 +97,5 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 alias reload="exec $SHELL -l"
 
 alias v="amixer sset 'IEC958' volume"
+
+complete -F _git g

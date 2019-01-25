@@ -13,9 +13,11 @@ let g:pymode_rope_lookup_project = 0
 let g:pymode_virtualenv = 1
 let g:ropevim_vim_completion=0
 let g:sneak#label = 1 " Show labels while using sneak
+"  "let g:syntastic_disabled_filetypes=['python']
+let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
 
-nmap <F8> :TagbarToggle<CR>
 syntax on
+nmap <F8> :TagbarToggle<CR>
 cabbr <expr> %% expand('%:p:h')
 
 set tabstop=4
@@ -28,6 +30,7 @@ set ignorecase smartcase
 set number
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_components/*
 
+autocmd BufWritePost *.py call Flake8()
 autocmd BufNewFile,BufRead *.cap   set syntax=ruby
 autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
@@ -35,6 +38,7 @@ autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss.*.scm setl tabstop=2 shiftwidth=2 expandtab
 au BufNewFile,BufReadPost *.emblem,*.haml,*.py,*.coffee,*.jade set foldmethod=indent
 au BufNewFile,BufReadPost *.html,*.c setl tabstop=4 shiftwidth=4 expandtab
+
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -79,7 +83,6 @@ Plug 'othree/html5.vim'
 Plug 'othree/xml.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
-Plug 'python-mode/python-mode'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
