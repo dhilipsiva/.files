@@ -27,7 +27,7 @@ def setup():
     deb.update_index()
     deb.upgrade()
     require.deb.packages([
-        "build-essential", "i3", "unzip", "xclip", "curl", "git", "iw",
+        "build-essential", "i3", "unzip", "xclip", "curl", "git", "iw", "sudo",
         "network-manager", "firmware-atheros", "xfce4-terminal", "xdm"])
     run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"')  # NOQA
     run("touch private.sh")
@@ -49,15 +49,9 @@ Some Use commands for new machine
 su -
 ip link list
 ip link set enp0s20f0u3 up
-nmcli dev
-nmcli dev list
-nmcli device wifi rescan
+nmtui
 lspci
 apt install i3
 vi /etc/apt/sources.list
-apt install iw
-apt install network-manager
 iw config
-exit
-apt install firmware-atheros
 '''
