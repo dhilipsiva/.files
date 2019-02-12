@@ -33,6 +33,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_c
 autocmd BufWritePost *.py call Flake8()
 autocmd BufNewFile,BufRead *.cap   set syntax=ruby
 autocmd BufNewFile,BufRead Pipfile set filetype=toml
+autocmd BufNewFile,BufRead *.json,Pipfile.lock set syntax=javascript
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 
 au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss.*.scm setl tabstop=2 shiftwidth=2 expandtab
@@ -51,6 +52,7 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-gitgutter'
 Plug 'brooth/far.vim'
 Plug 'cespare/vim-toml'
+Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cstrahan/vim-capnp'
 Plug 'dsawardekar/ember.vim'
