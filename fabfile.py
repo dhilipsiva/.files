@@ -27,8 +27,8 @@ def setup():
     deb.update_index()
     deb.upgrade()
     require.deb.packages([
-        "build-essential", "i3", "unzip", "xclip", "curl", "git", "iw", "sudo",
-        "network-manager", "firmware-atheros", "xfce4-terminal", "xdm"])
+        "build-essential", "i3", "unzip", "xclip", "curl", "git", "sudo",
+        "xdm", "iw", "network-manager", "firmware-atheros", "xfce4-terminal"])
     run('sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"')  # NOQA
     run("touch private.sh")
     git_seed(dot_dir)
@@ -37,6 +37,8 @@ def setup():
         with settings(warn_only=True):
             run("cp home/.* ~")
             run("cp -R fonts/ ~/.fonts")
+            run("fc-cache -rf")
+    run("locales")
     run("brew install gcc ruby curl python3 neovim bash bash-completion@2 git pipenv tmux")  # NOQA
     run("pip3 install powerline-shell pwdman hostscli neovim tmuxp")
     sudo("hostscli block_all")
