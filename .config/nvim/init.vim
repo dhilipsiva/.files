@@ -67,6 +67,7 @@ Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
+Plug 'juliosueiras/vim-terraform-completion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'

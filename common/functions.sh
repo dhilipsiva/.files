@@ -2,6 +2,7 @@ function search {
     grep -irl \
         --exclude=\*.{pyc,swp,un~,png,jpg,o} \
         --exclude-dir=".git" \
+        --exclude-dir=".venv" \
         --exclude-dir=".cache" \
         --exclude-dir=".tox" \
         --exclude-dir="node_modules" \
@@ -14,6 +15,7 @@ function search {
         --exclude-dir="build" \
         --exclude-dir="uploads" \
         --exclude-dir=".ropeproject" \
+        --exclude-dir="notebooks" \
         --color "$*" .
 }
 
