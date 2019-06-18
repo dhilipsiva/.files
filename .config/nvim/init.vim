@@ -36,7 +36,7 @@ autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufNewFile,BufRead *.json,Pipfile.lock set syntax=javascript
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 
-au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss.*.scm setl tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss,*.scm,*.toml setl tabstop=2 shiftwidth=2 expandtab
 au BufNewFile,BufReadPost *.emblem,*.haml,*.py,*.coffee,*.jade set foldmethod=indent
 au BufNewFile,BufReadPost *.html,*.c setl tabstop=4 shiftwidth=4 expandtab
 
