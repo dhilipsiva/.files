@@ -1,5 +1,6 @@
 " Declarations\
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
+let g:airline_theme='papercolor'
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTreeIgnore = ['\.pyc$']
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
@@ -24,6 +25,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+set background=dark
 set colorcolumn=80
 set encoding=utf8
 set ignorecase smartcase
@@ -45,6 +47,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'Quramy/vison'
 Plug 'Shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips'
@@ -66,7 +69,6 @@ Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'joshdick/onedark.vim'
 Plug 'juliosueiras/vim-terraform-completion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -113,4 +115,4 @@ call plug#end()
 
 
 " Post Plugin stuff
-colorscheme onedark
+colorscheme PaperColor
