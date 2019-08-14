@@ -1,0 +1,15 @@
+session_name: 'pgorm'
+windows:
+- panes:
+  - pipenv shell
+  - pipenv shell
+  start_directory: /home/dhilipsiva/Projects/reckonsys/pgorm
+  window_name: pgorm
+- panes:
+  - pipenv shell
+  - pipenv shell
+  start_directory: /home/dhilipsiva/Projects/reckonsys/jatayu
+  window_name: jatayu
+- panes:
+  - ls
+  window_name: bash
