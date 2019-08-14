@@ -39,16 +39,16 @@ _fab()
     local tags=$(fab -l 2>/dev/null | grep "^    " | awk '{print $1;}')
     COMPREPLY=($(compgen -W "${tags}" $cur))
 }
-complete -F _fab fab
+# complete -F _fab fab
 
 # complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
 #     || complete -o default -o nospace -F _git g
 
-complete -F _docker d
+# complete -F _docker d
 
-complete -F _docker_machine dm
+# complete -F _docker_machine dm
 
-complete -F _docker_compose dc
+# complete -F _docker_compose dc
 
 # Use ~~ as the trigger sequence instead of the default **
 export FZF_COMPLETION_TRIGGER='~~'

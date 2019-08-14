@@ -24,6 +24,7 @@ cabbr <expr> %% expand('%:p:h')
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set nowrap
 
 set background=dark
 set colorcolumn=80

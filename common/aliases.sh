@@ -21,6 +21,7 @@ alias q="exit"
 alias s="scheme"
 alias shba="sudo hostscli block_all"
 alias t="date"
+alias pes="pipenv shell"
 # alias clear="echo use ctrl+l :P"
 
 
