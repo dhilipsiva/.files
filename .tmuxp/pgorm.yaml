@@ -10,6 +10,3 @@ windows:
   - pipenv shell
   start_directory: /home/dhilipsiva/Projects/reckonsys/jatayu
   window_name: jatayu
-- panes:
-  - ls
-  window_name: bash
