@@ -23,6 +23,7 @@ alias shba="sudo hostscli block_all"
 alias t="tmux"
 alias sn="shutdown now"
 alias pes="pipenv shell"
+alias os='tmuxp load os'
 # alias clear="echo use ctrl+l :P"
 
 

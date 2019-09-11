@@ -1,0 +1,8 @@
+session_name: 'opensteer'
+windows:
+- window_name: OpenSteer
+  layout: main-vertical
+  start_directory: /home/dhilipsiva/Projects/reckonsys/opensteer
+  panes:
+  - pipenv shell ./manage.py runserver
+  - pipenv shell nvm use --delete-prefix 10.16.0
