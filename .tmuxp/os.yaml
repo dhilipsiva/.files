@@ -5,4 +5,4 @@ windows:
   start_directory: /home/dhilipsiva/Projects/reckonsys/opensteer
   panes:
   - pipenv shell ./manage.py runserver
-  - pipenv shell nvm use --delete-prefix 10.16.0
+  - pipenv shell nvm use --delete-prefix --lts
