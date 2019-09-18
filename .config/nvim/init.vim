@@ -1,6 +1,6 @@
 " Declarations\
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
-let g:airline_theme='papercolor'
+let g:airline_theme='light'
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTreeIgnore = ['\.pyc$']
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
@@ -104,6 +104,7 @@ Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
 Plug 'vimwiki/vimwiki'
 Plug 'wakatime/vim-wakatime'
