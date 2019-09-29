@@ -6,7 +6,9 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 
 # Shortcuts
+
 alias b="brew"
+alias c='xclip -select c'
 alias d="docker"
 alias dc="docker-compose"
 alias dm="docker-machine"
@@ -15,17 +17,17 @@ alias em="ember"
 alias f="fuck"
 alias g="git"
 alias h="history"
+alias os='tmuxp load os'
 alias p="cd ~/Projects"
 alias p="python"
+alias pes="pipenv shell"
+alias pg="postgres -D /home/linuxbrew/.linuxbrew/var/postgres/"
 alias q="exit"
+alias rmq="/home/linuxbrew/.linuxbrew/Cellar/rabbitmq/3.7.5/sbin/rabbitmq-server"
 alias s="scheme"
 alias shba="sudo hostscli block_all"
-alias t="tmux"
 alias sn="shutdown now"
-alias pes="pipenv shell"
-alias os='tmuxp load os'
-# alias clear="echo use ctrl+l :P"
-
+alias t="tmux"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

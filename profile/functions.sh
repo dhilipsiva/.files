@@ -1,3 +1,7 @@
+RES=1920x1080
+LAP=eDP-1
+MON=HDMI-1
+
 function search {
     grep -irl \
         --exclude=\*.{pyc,swp,un~,png,jpg,o} \
@@ -47,4 +51,28 @@ function keys {
 
 function 2nd {
     awk '{print $2}'
+}
+
+function cc(){
+	cat $1 | xclip -select c
+}
+
+function sm() {
+   # Screen Mirrored
+   xrandr --output $LAP --mode $RES --output $MON  --primary --mode $RES --same-as $LAP
+}
+
+function sb() {
+   # Screen Both
+   xrandr --output $LAP --mode $RES --output $MON  --primary --mode $RES --left-of $LAP
+}
+
+function se () {
+    # Screen External
+   xrandr --output $LAP --off --output $MON --primary --mode $RES
+}
+
+function si () {
+    # Screen Internal
+   xrandr --output $LAP --primary --mode $RES --output $MON --off
 }

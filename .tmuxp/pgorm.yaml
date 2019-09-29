@@ -2,13 +2,13 @@ session_name: 'pgorm'
 windows:
 - window_name: pgorm
   layout: main-vertical
-  start_directory: /home/dhilipsiva/Projects/reckonsys/pgorm
+  start_directory: ~/Projects/reckonsys/pgorm
   panes:
   - pipenv shell
   - pipenv shell
 - window_name: jatayu
   layout: main-vertical
-  start_directory: /home/dhilipsiva/Projects/reckonsys/jatayu
+  start_directory: ~/Projects/reckonsys/jatayu
   panes:
   - pipenv shell
   - pipenv shell

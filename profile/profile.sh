@@ -1,6 +1,6 @@
-source ~/.files/common/exports.sh
-source ~/.files/common/aliases.sh
-source ~/.files/common/functions.sh
+source ~/.files/profile/exports.sh
+source ~/.files/profile/aliases.sh
+source ~/.files/profile/functions.sh
 source ~/private.sh
 
 unset file
@@ -85,3 +85,7 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [ -f /home/linuxbrew/.linuxbrew/share/bash-completion/bash_completion ]; then
+  . /home/linuxbrew/.linuxbrew/share/bash-completion/bash_completion
+fi
