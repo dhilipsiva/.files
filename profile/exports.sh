@@ -2,8 +2,8 @@
 export DOTFILES_DIR=$HOME/.files
 export EDITOR='nvim'
 export GOPATH=~/go
-export LANG=en_IN.UTF-8
-export LC_ALL=en_IN.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/libs
 export PATH=$USER_BIN:$PATH
 export SHELL="/home/linuxbrew/.linuxbrew/bin/bash"
