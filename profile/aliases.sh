@@ -28,6 +28,7 @@ alias s="scheme"
 alias shba="sudo hostscli block_all"
 alias sn="shutdown now"
 alias t="tmux"
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -106,4 +107,4 @@ alias reload="exec $SHELL -l"
 
 alias v="amixer sset 'IEC958' volume"
 
-complete -F _git g
+# complete -F _git g

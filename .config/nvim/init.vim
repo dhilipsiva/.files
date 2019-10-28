@@ -1,11 +1,13 @@
 " Declarations\
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
-let g:airline_theme='light'
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTreeIgnore = ['\.pyc$']
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
 let g:airline_powerline_fonts = 1 " Vim devicons for powerline
+let g:airline_theme='light'
 let g:deoplete#enable_at_startup= 1 " Start deoplete at startup
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_setColors = 0
 let g:jsx_ext_required = 0
 let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
 let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
@@ -14,8 +16,8 @@ let g:pymode_rope_lookup_project = 0
 let g:pymode_virtualenv = 1
 let g:ropevim_vim_completion=0
 let g:sneak#label = 1 " Show labels while using sneak
-"  "let g:syntastic_disabled_filetypes=['python']
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
+"  "let g:syntastic_disabled_filetypes=['python']
 
 syntax on
 nmap <F8> :TagbarToggle<CR>
@@ -53,12 +55,14 @@ Plug 'Quramy/vison'
 Plug 'Shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/MatchTagAlways'
+Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'brooth/far.vim'
 Plug 'cespare/vim-toml'
 Plug 'chr4/nginx.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'cstrahan/vim-capnp'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'dsawardekar/ember.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'epilande/vim-es2015-snippets'
@@ -84,7 +88,6 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-grepper'
 Plug 'mhinz/vim-signify'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nvie/vim-flake8'
 Plug 'othree/html5.vim'
 Plug 'othree/xml.vim'
@@ -118,4 +121,4 @@ call plug#end()
 
 
 " Post Plugin stuff
-colorscheme PaperColor
+colorscheme dracula
