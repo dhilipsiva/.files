@@ -17,7 +17,6 @@ alias em="ember"
 alias f="fuck"
 alias g="git"
 alias h="history"
-alias os='tmuxp load os'
 alias p="cd ~/Projects"
 alias p="python"
 alias pes="pipenv shell"
@@ -30,6 +29,9 @@ alias sn="shutdown now"
 alias t="tmux"
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+# tmuxp shortcuts
+alias os='tmuxp load os'
+alias unite='tmuxp load unite'
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"

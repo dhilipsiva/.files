@@ -2,13 +2,13 @@ session_name: 'unite'
 windows:
 - window_name: cli
   layout: main-vertical
-  start_directory: /home/dhilipsiva/Projects/students-workingperson/unite/
+  start_directory: /home/dhilipsiva/Projects/working-class/unite/
   panes:
   - pipenv shell
   # - pipenv shell python sio_server.py
 
 - window_name: edit
   layout: main-vertical
-  start_directory: /home/dhilipsiva/Projects/students-workingperson/unite/
+  start_directory: /home/dhilipsiva/Projects/working-class/unite/
   panes:
   - pipenv shell

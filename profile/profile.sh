@@ -1,6 +1,7 @@
 source ~/.files/profile/exports.sh
 source ~/.files/profile/aliases.sh
 source ~/.files/profile/functions.sh
+source ~/.files/profile/history.sh
 source ~/private.sh
 
 unset file
