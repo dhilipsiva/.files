@@ -13,6 +13,7 @@ alias d="docker"
 alias dc="docker-compose"
 alias dm="docker-machine"
 alias e="nvim"
+alias :e="e"  # Somtimes I type this thinking that I am inside vim :P
 alias em="ember"
 alias f="fuck"
 alias g="git"
