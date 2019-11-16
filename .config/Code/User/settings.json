@@ -1,0 +1,8 @@
+{
+    "explorer.confirmDelete": false,
+    "files.autoSave": "onWindowChange",
+    "editor.fontFamily": "SauceCodePro NF",
+    "editor.fontSize": 18,
+    "debug.console.fontSize": 18,
+    "terminal.integrated.fontSize": 18
+}
