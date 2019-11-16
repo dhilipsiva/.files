@@ -4,6 +4,7 @@ let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTreeIgnore = ['\.pyc$']
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
 let g:airline_powerline_fonts = 1 " Vim devicons for powerline
+let g:deoplete#sources#jedi#enable_typeinfo = 0
 let g:airline_theme='light'
 let g:deoplete#enable_at_startup= 1 " Start deoplete at startup
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
