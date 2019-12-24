@@ -8,6 +8,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/libs
 export PATH=$USER_BIN:$PATH
 export SHELL="/home/linuxbrew/.linuxbrew/bin/bash"
 export USER_BIN=$HOME/bin
+export PYTHONBREAKPOINT=ipdb.set_trace
 
 # 1st Degree Derivatives (Depends only on Independant vars)
 export PATH=$GOPATH/bin:$PATH

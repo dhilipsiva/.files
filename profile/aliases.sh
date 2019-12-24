@@ -28,7 +28,9 @@ alias s="scheme"
 alias shba="sudo hostscli block_all"
 alias sn="shutdown now"
 alias t="tmux"
+alias y="yarn"
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias wk="watchman watch-del-all && watchman shutdown-server"  # Kill watchman and loot things
 
 # tmuxp shortcuts
 alias os='tmuxp load os'
