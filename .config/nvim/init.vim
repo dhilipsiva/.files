@@ -1,4 +1,5 @@
 " Declarations\
+"let g:syntastic_disabled_filetypes=['python']
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTreeIgnore = ['\.pyc$']
@@ -12,6 +13,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_setColors = 0
 let g:jsx_ext_required = 0
 let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
+let g:prettier#autoformat_require_pragma = 0
 let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
 let g:pymode_rope = 0
 let g:pymode_rope_lookup_project = 0
@@ -19,7 +21,6 @@ let g:pymode_virtualenv = 1
 let g:ropevim_vim_completion=0
 let g:sneak#label = 1 " Show labels while using sneak
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
-"let g:syntastic_disabled_filetypes=['python']
 
 syntax on
 nmap <F8> :TagbarToggle<CR>
@@ -38,6 +39,7 @@ set number
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_components/*
 
 autocmd BufWritePost *.py call Flake8()
+autocmd BufWritePre *.js Prettier
 autocmd BufNewFile,BufRead *.cap   set syntax=ruby
 autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufNewFile,BufRead *.json,Pipfile.lock set syntax=javascript
@@ -64,6 +66,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'pangloss/vim-javascript'
+Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
