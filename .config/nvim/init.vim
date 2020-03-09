@@ -4,6 +4,9 @@ let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line com
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTreeIgnore = ['\.pyc$']
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:airline_powerline_fonts = 1 " Vim devicons for powerline
 let g:airline_theme='onedark'
 let g:deoplete#auto_complete_delay = 100
@@ -53,18 +56,26 @@ au BufNewFile,BufReadPost *.html,*.c setl tabstop=4 shiftwidth=4 expandtab
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/MatchTagAlways'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
+Plug 'alvan/vim-closetag'
 Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'deoplete-plugins/deoplete-docker'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-tag'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'honza/vim-snippets'
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'majutsushi/tagbar'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'nvie/vim-flake8'
+Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 Plug 'ryanoasis/vim-devicons'
