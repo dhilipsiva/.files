@@ -4,5 +4,5 @@ windows:
   layout: main-vertical
   start_directory: ~/Projects/reckonsys/opensteer
   panes:
-  - poetry shell ./manage.py runserver
-  - poetry shell nvm use --delete-prefix --lts
+  - poetry run ./manage.py runserver
+  - nvm use --delete-prefix --lts
