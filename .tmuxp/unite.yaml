@@ -4,11 +4,11 @@ windows:
   layout: main-vertical
   start_directory: /home/dhilipsiva/Projects/working-class/unite/
   panes:
-  - pipenv shell
-  # - pipenv shell python sio_server.py
+  - poetry shell
+  # - poetry shell python sio_server.py
 
 - window_name: edit
   layout: main-vertical
   start_directory: /home/dhilipsiva/Projects/working-class/unite/
   panes:
-  - pipenv shell
+  - poetry shell

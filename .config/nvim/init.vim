@@ -66,7 +66,9 @@ Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'deoplete-plugins/deoplete-docker'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-tag'
+Plug 'digitaltoad/vim-pug'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'fisadev/vim-isort'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

@@ -4,11 +4,11 @@ windows:
   layout: main-vertical
   start_directory: ~/Projects/reckonsys/pgorm
   panes:
-  - pipenv shell
-  - pipenv shell
+  - poetry shell
+  - poetry shell
 - window_name: jatayu
   layout: main-vertical
   start_directory: ~/Projects/reckonsys/jatayu
   panes:
-  - pipenv shell
-  - pipenv shell
+  - poetry shell
+  - poetry shell

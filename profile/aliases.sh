@@ -7,13 +7,14 @@ alias -- -="cd -"
 
 # Shortcuts
 
+alias :e="e"  # Somtimes I type this thinking that I am inside vim :P
 alias b="brew"
+alias be="xargs nvim -p"  # Bulk edit by piping filenames
 alias c='xclip -select c'
 alias d="docker"
 alias dc="docker-compose"
 alias dm="docker-machine"
 alias e="nvim"
-alias :e="e"  # Somtimes I type this thinking that I am inside vim :P
 alias em="ember"
 alias f="fuck"
 alias g="git"
@@ -22,16 +23,16 @@ alias p="cd ~/Projects"
 alias p="python"
 alias pes="pipenv shell"
 alias pg="postgres -D /home/linuxbrew/.linuxbrew/var/postgres/"
+alias postman="flatpak run com.getpostman.Postman"
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias q="exit"
 alias rmq="/home/linuxbrew/.linuxbrew/Cellar/rabbitmq/3.7.5/sbin/rabbitmq-server"
 alias s="scheme"
 alias shba="sudo hostscli block_all"
 alias sn="shutdown now"
 alias t="tmux"
-alias y="yarn"
-alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias wk="watchman watch-del-all && watchman shutdown-server"  # Kill watchman and loot things
-alias postman="flatpak run com.getpostman.Postman"
+alias y="yarn"
 
 # tmuxp shortcuts
 alias os='tmuxp load os'
