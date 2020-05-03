@@ -9,7 +9,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:airline_powerline_fonts = 1 " Vim devicons for powerline
 let g:airline_theme='onedark'
-let g:deoplete#auto_complete_delay = 100
 let g:deoplete#enable_at_startup = 1 " Start deoplete at startup
 let g:deoplete#sources#jedi#enable_typeinfo = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -101,6 +100,7 @@ endif
 "
 " Initialize plugin system
 call plug#end()
+call deoplete#custom#option('auto_complete_delay', 100)
 
 
 " Post Plugin stuff
