@@ -5,38 +5,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 
-# Shortcuts
-
-alias :e="e"  # Somtimes I type this thinking that I am inside vim :P
-alias b="brew"
-alias be="xargs nvim -p"  # Bulk edit by piping filenames
-alias c='xclip -select c'
-alias d="docker"
-alias dc="docker-compose"
-alias dm="docker-machine"
-alias e="nvim"
-alias em="ember"
-alias f="fuck"
-alias g="git"
-alias h="history"
-alias p="cd ~/Projects"
-alias p="python"
-alias pes="pipenv shell"
-alias pg="postgres -D /home/linuxbrew/.linuxbrew/var/postgres/"
-alias postman="flatpak run com.getpostman.Postman"
-alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias q="exit"
-alias rmq="/home/linuxbrew/.linuxbrew/Cellar/rabbitmq/3.7.5/sbin/rabbitmq-server"
-alias s="scheme"
-alias shba="sudo hostscli block_all"
-alias sn="shutdown now"
-alias t="tmux"
-alias wk="watchman watch-del-all && watchman shutdown-server"  # Kill watchman and loot things
-alias y="yarn"
-
-# tmuxp shortcuts
-alias os='tmuxp load os'
-alias unite='tmuxp load unite'
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
     colorflag="--color"
@@ -44,62 +12,54 @@ else # OS X `ls`
     colorflag="-G"
 fi
 
-# LS_COLORS=$(ls_colors_generator)
 
-# List all files colorized in long format
-alias l="ls -F ${colorflag}"
+# Shortcuts
 
-# List all files with size and colored
-alias ll="ls -lahF ${colorflag}"
-
-# List all files colorized in long format, including dot files
-alias la="ls -aF ${colorflag}"
-
-# List only directories
-alias lsd="ls -F ${colorflag} | grep --color=never '^d'"
-
-
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
-# Stopwatch
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-
-# IP addresses
-# alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
+alias :e="e"  # Somtimes I type this thinking that I am inside vim :P
+alias b="brew"
+alias be="xargs nvim -p"  # Bulk edit by piping filenames
+alias c='xclip -select c'
+alias d="docker"
+alias das='tmuxp load das'
+alias dc="docker-compose"
+alias dm="docker-machine"
+alias e="nvim"
+alias em="ember"
+alias f="fuck"
+alias g="git"
+alias h="history"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""  # View HTTP traffic
+alias iplocal="ipconfig getifaddr en0"
+alias ippub="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias l="ls -F ${colorflag}"  # List all files colorized in long format
+alias la="ls -aF ${colorflag}"  # List all files colorized in long format, including dot files
+alias ll="ls -lahF ${colorflag}"  # List all files with size and colored
+alias lsd="ls -F ${colorflag} | grep --color=never '^d'" # List only directories
+alias map="xargs -n1"  # find . -name .gitattributes | map dirname
+alias os='tmuxp load os'
+alias p="python"
+alias pg="postgres -D /home/linuxbrew/.linuxbrew/var/postgres/"
+alias pos="poetry shell"
+alias postman="flatpak run com.getpostman.Postman"
+alias q="exit"
+alias reload="exec $SHELL -l"  # Reload the shell (i.e. invoke as a login shell)
+alias rmq="rabbitmq-server"
+alias s="scheme"
+alias shba="sudo hostscli block-all"
+alias shua="sudo hostscli unblock-all"
+alias sn="shutdown now"
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"  # View HTTP traffic
+alias sudo='sudo '  # Enable aliases to be sudo’ed
+alias t="tmux"
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'  # Stopwatch
+alias unite='tmuxp load unite'
+alias v="amixer sset 'IEC958' volume"
+alias wk="watchman watch-del-all && watchman shutdown-server"  # Kill watchman and loot things
+alias y="yarn"
 
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
-
-# OS X has no `md5sum`, so use `md5` as a fallback
-command -v md5sum > /dev/null || alias md5sum="md5"
-
-# OS X has no `sha1sum`, so use `shasum` as a fallback
-command -v sha1sum > /dev/null || alias sha1sum="shasum"
-
-# Trim new lines and copy to clipboard
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-
-# URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
-
-# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
-# (useful when executing time-consuming commands)
-alias badge="tput bel"
-
-# Intuitive map function
-# For example, to list all directories that contain a certain file:
-# find . -name .gitattributes | map dirname
-alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
@@ -108,10 +68,3 @@ done
 
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
-
-# Reload the shell (i.e. invoke as a login shell)
-alias reload="exec $SHELL -l"
-
-alias v="amixer sset 'IEC958' volume"
-
-# complete -F _git g
