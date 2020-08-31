@@ -90,3 +90,5 @@ export NVM_DIR="$HOME/.nvm"
 if [ -f /home/linuxbrew/.linuxbrew/share/bash-completion/bash_completion ]; then
   . /home/linuxbrew/.linuxbrew/share/bash-completion/bash_completion
 fi
+
+source $(brew --prefix autoenv)/activate.sh

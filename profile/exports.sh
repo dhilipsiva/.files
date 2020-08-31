@@ -4,14 +4,14 @@ export EDITOR='nvim'
 export GOPATH=~/go
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/libs
-export PATH=$USER_BIN:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/libs:/home/linuxbrew/.linuxbrew/opt/python@3.8/lib
 export SHELL="/home/linuxbrew/.linuxbrew/bin/bash"
 export USER_BIN=$HOME/bin
 export PYTHONBREAKPOINT=ipdb.set_trace
 
 # 1st Degree Derivatives (Depends only on Independant vars)
 export PATH=$GOPATH/bin:$PATH
+export PATH=$USER_BIN:$PATH
 export TMUXP_CONFIGDIR=$DOTFILES_DIR/.tmuxp
 export XDG_CONFIG_HOME=$DOTFILES_DIR/.config
 

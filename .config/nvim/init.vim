@@ -61,17 +61,21 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
+Plug 'cespare/vim-toml'
 Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'deoplete-plugins/deoplete-docker'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-tag'
 Plug 'digitaltoad/vim-pug'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'elixir-editors/vim-elixir'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fisadev/vim-isort'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
@@ -83,10 +87,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wakatime/vim-wakatime'
+Plug 'wellle/targets.vim'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
