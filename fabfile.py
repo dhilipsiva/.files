@@ -40,7 +40,7 @@ def setup():
             run("fc-cache -rf")
     run("locales")
     run("brew install gcc ruby curl python3 neovim bash bash-completion@2 git pipenv tmux")  # NOQA
-    run("pip3 install powerline-shell pwdman hostscli neovim tmuxp")
+    run("pip3 install pwdman hostscli neovim tmuxp")
     sudo("hostscli block_all")
     run("curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim") # NOQA
     run('nvim -c "PlugInstall | q | q"')

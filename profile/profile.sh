@@ -4,6 +4,7 @@ source ~/.files/profile/functions.sh
 source ~/.files/profile/history.sh
 source ~/private.sh
 
+
 unset file
 
 # Case-insensitive globbing (used in pathname expansion)
@@ -68,14 +69,6 @@ _fzf_compgen_path() {
 complete -F _fzf_path_completion -o default -o bashdefault ag
 complete -F _fzf_dir_completion -o default -o bashdefault tree
 
-function _update_ps1() {
-    PS1="$(powerline-shell $?)"
-}
-
-if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-
 # USER_BIN is declared in common/exports.sh
 GCLOUD_DIR=$USER_BIN/google-cloud-sdk
 if [ -d "$GCLOUD_DIR" ]; then
@@ -92,3 +85,6 @@ if [ -f /home/linuxbrew/.linuxbrew/share/bash-completion/bash_completion ]; then
 fi
 
 source $(brew --prefix autoenv)/activate.sh
+
+
+eval "$(starship init bash)"

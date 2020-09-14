@@ -14,6 +14,7 @@ export PATH=$GOPATH/bin:$PATH
 export PATH=$USER_BIN:$PATH
 export TMUXP_CONFIGDIR=$DOTFILES_DIR/.tmuxp
 export XDG_CONFIG_HOME=$DOTFILES_DIR/.config
+export STARSHIP_CONFIG=$DOTFILES_DIR/.starship
 
 # 2dn Degree Derivatives (Depends on 1st Degree variables)
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc

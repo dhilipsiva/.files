@@ -11,6 +11,8 @@ let g:airline_powerline_fonts = 1 " Vim devicons for powerline
 let g:airline_theme='onedark'
 let g:deoplete#enable_at_startup = 1 " Start deoplete at startup
 let g:deoplete#sources#jedi#enable_typeinfo = 0
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_setColors = 0
 let g:jsx_ext_required = 0
@@ -23,6 +25,7 @@ let g:pymode_virtualenv = 1
 let g:ropevim_vim_completion=0
 let g:sneak#label = 1 " Show labels while using sneak
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
+
 
 syntax on
 nmap <F8> :TagbarToggle<CR>
@@ -41,6 +44,7 @@ set number
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_components/*
 
 autocmd BufWritePost *.py call Flake8()
+autocmd BufWritePost *.go GoBuild
 autocmd BufWritePre *.js Prettier
 autocmd BufNewFile,BufRead *.cap   set syntax=ruby
 autocmd BufNewFile,BufRead Pipfile set filetype=toml
