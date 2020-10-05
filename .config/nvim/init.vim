@@ -45,7 +45,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_c
 
 autocmd BufWritePost *.py call Flake8()
 autocmd BufWritePost *.go GoBuild
-autocmd BufWritePre *.js Prettier
+autocmd BufWritePre *.js,*.ts,*.tsx Prettier
 autocmd BufNewFile,BufRead *.cap   set syntax=ruby
 autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufNewFile,BufRead *.json,Pipfile.lock set syntax=javascript
@@ -59,6 +59,7 @@ au BufNewFile,BufReadPost *.html,*.c setl tabstop=4 shiftwidth=4 expandtab
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
+Plug 'Quramy/tsuquyomi'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -80,6 +81,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}

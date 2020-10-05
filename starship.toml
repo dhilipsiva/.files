@@ -4,9 +4,13 @@ scan_for_pyfiles = false
 [aws]
 disabled = true
 
+[docker]
+disabled = true
 
 [time]
 disabled = false
-format = "%R"
-utc_time_offset = "5.5"
+# format = '%R'
+format = "[$time]($style) "
+time_format = '%R'
+utc_time_offset = 5.5
 # time_range = "10:00:00-14:00:00"
