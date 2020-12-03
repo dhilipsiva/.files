@@ -83,6 +83,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
+Plug 'mg979/vim-visual-multi'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'nvie/vim-flake8'
