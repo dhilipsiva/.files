@@ -9,8 +9,15 @@ disabled = true
 
 [time]
 disabled = false
-# format = '%R'
 format = "[$time]($style) "
 time_format = '%R'
 utc_time_offset = 5.5
-# time_range = "10:00:00-14:00:00"
+
+[nodejs]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[package]
+disabled = true

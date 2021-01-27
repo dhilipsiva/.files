@@ -23,6 +23,7 @@ let g:pymode_rope = 0
 let g:pymode_rope_lookup_project = 0
 let g:pymode_virtualenv = 1
 let g:ropevim_vim_completion=0
+let g:rustfmt_autosave = 1
 let g:sneak#label = 1 " Show labels while using sneak
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
 
@@ -90,6 +91,7 @@ Plug 'nvie/vim-flake8'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'rust-lang/rust.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
