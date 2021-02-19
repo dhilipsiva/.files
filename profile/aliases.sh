@@ -15,8 +15,9 @@ fi
 
 # Shortcuts
 
-alias :e="e"  # Somtimes I type this thinking that I am inside vim :P
-alias b="brew"
+alias :e="nvim"  # Somtimes I type this thinking that I am inside vim :P
+alias :q="exit"
+alias :wq="exit"
 alias be="xargs nvim -p"  # Bulk edit by piping filenames
 alias c='xclip -select c'
 alias d="docker"

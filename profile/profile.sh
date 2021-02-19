@@ -1,3 +1,5 @@
+[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
+
 source ~/.files/profile/exports.sh
 source ~/.files/profile/aliases.sh
 source ~/.files/profile/functions.sh
@@ -23,25 +25,15 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null
 done
 
-if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-  . /usr/local/share/bash-completion/bash_completion
-fi
+# if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+#   . /usr/local/share/bash-completion/bash_completion
+# fi
+
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
 
 complete -C aws_completer aws
-
-# A `faric` auto completion utility
-_fab()
-{
-    local cur
-    COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    local tags=$(fab -l 2>/dev/null | grep "^    " | awk '{print $1;}')
-    COMPREPLY=($(compgen -W "${tags}" $cur))
-}
-# complete -F _fab fab
 
 # complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
 #     || complete -o default -o nospace -F _git g
@@ -52,11 +44,6 @@ _fab()
 
 # complete -F _docker_compose dc
 
-# Use ~~ as the trigger sequence instead of the default **
-export FZF_COMPLETION_TRIGGER='~~'
-
-# Options to fzf command
-export FZF_COMPLETION_OPTS='+c -x'
 
 # Use ag instead of the default find command for listing candidates.
 # - The first argument to the function is the base path to start traversal
@@ -80,11 +67,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [ -f /home/linuxbrew/.linuxbrew/share/bash-completion/bash_completion ]; then
-  . /home/linuxbrew/.linuxbrew/share/bash-completion/bash_completion
-fi
 
 source $(brew --prefix autoenv)/activate.sh
-
-
 eval "$(starship init bash)"
+eval "$(gh completion -s bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
