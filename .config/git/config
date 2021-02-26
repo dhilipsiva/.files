@@ -147,3 +147,5 @@
 	helper = store
 [http]
 	sslVerify = true
+[init]
+	defaultBranch = main
