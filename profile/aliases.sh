@@ -27,6 +27,7 @@ alias dm="docker-machine"
 alias e="nvim"
 alias em="ember"
 alias f="fuck"
+alias ff="firefox"
 alias g="git"
 alias h="history"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""  # View HTTP traffic
@@ -42,7 +43,6 @@ alias os='tmuxp load os'
 alias p="python"
 alias pg="postgres -D /home/linuxbrew/.linuxbrew/var/postgres/"
 alias pos="poetry shell"
-alias postman="flatpak run com.getpostman.Postman"
 alias q="exit"
 alias reload="exec $SHELL -l"  # Reload the shell (i.e. invoke as a login shell)
 alias rmq="rabbitmq-server"
@@ -59,13 +59,14 @@ alias v="amixer sset 'IEC958' volume"
 alias wk="watchman watch-del-all && watchman shutdown-server"  # Kill watchman and loot things
 alias y="yarn"
 
-# Canonical hex dump; some systems have this symlinked
-command -v hd > /dev/null || alias hd="hexdump -C"
+# flatpak aliases
+# alias chromium="flatpak run org.chromium.Chromium"
+# alias postman="flatpak run com.getpostman.Postman"
+# alias slack="flatpak run com.slack.Slack"
+# alias teams="flatpak run com.microsoft.Teams"
+# alias telegram="flatpak run org.telegram.desktop"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
     alias "$method"="lwp-request -m '$method'"
 done
-
-# Make Grunt print stack traces by default
-command -v grunt > /dev/null && alias grunt="grunt --stack"
