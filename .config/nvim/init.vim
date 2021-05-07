@@ -38,19 +38,20 @@ set expandtab
 set nowrap
 
 set background=dark
-set colorcolumn=80
+set colorcolumn=89
 set encoding=utf8
 set ignorecase smartcase
 set number
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_components/*
 
-autocmd BufWritePost *.py call Flake8()
-autocmd BufWritePost *.go GoBuild
-autocmd BufWritePre *.js,*.ts,*.tsx Prettier
 autocmd BufNewFile,BufRead *.cap   set syntax=ruby
-autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufNewFile,BufRead *.json,Pipfile.lock set syntax=javascript
+autocmd BufNewFile,BufRead Pipfile set filetype=toml
+autocmd BufWritePost *.go GoBuild
+autocmd BufWritePost *.py call Flake8()
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
+autocmd BufWritePre *.js,*.ts,*.tsx Prettier
+autocmd BufWritePre *.py execute ':Black'
 
 au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss,*.scm,*.toml setl tabstop=2 shiftwidth=2 expandtab
 au BufNewFile,BufReadPost *.emblem,*.haml,*.py,*.coffee,*.jade set foldmethod=indent
@@ -74,6 +75,7 @@ Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'deoplete-plugins/deoplete-tag'
 Plug 'digitaltoad/vim-pug'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fisadev/vim-isort'
@@ -91,6 +93,7 @@ Plug 'nvie/vim-flake8'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+Plug 'psf/black', { 'branch': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'

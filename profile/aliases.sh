@@ -20,6 +20,7 @@ alias :q="exit"
 alias :wq="exit"
 alias be="xargs nvim -p"  # Bulk edit by piping filenames
 alias c='xclip -select c'
+alias chat='firefox https://app.slack.com/client/T85P1VD8U/C86PZ86BZ'
 alias d="docker"
 alias das='tmuxp load das'
 alias dc="docker-compose"
