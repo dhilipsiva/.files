@@ -1,10 +1,7 @@
 [python]
-scan_for_pyfiles = false
+detect_extensions = []
 
 [aws]
-disabled = true
-
-[docker]
 disabled = true
 
 [time]

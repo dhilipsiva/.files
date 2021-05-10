@@ -5,6 +5,12 @@
     "editor.fontSize": 18,
     "debug.console.fontSize": 18,
     "terminal.integrated.fontSize": 18,
-    "workbench.colorTheme": "Dracula Soft",
-    "explorer.confirmDragAndDrop": false
+    "workbench.colorTheme": "Visual Studio Dark",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ]
 }
