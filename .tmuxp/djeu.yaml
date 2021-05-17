@@ -1,0 +1,45 @@
+session_name: 'DjConEU2021'
+
+windows:
+
+- window_name: support
+  layout: tiled
+  panes:
+  - postgres -D /home/linuxbrew/.linuxbrew/var/postgres
+  - rabbitmq-server
+  - minio server ~/data/minio
+  - MailHog
+
+- window_name: services
+  layout: tiled
+  start_directory: ~/projects/djconeu2021
+  panes:
+  - cd stackopenflow-api && poetry run ./manage.py runserver
+  - cd stackopenflow-api && poetry run celery -A stackopenflow worker -l debug
+  - cd stackopenflow-app && y relay
+  - cd stackopenflow-app && y s
+
+- window_name: api
+  start_directory: ~/projects/djconeu2021/stackopenflow-api
+  panes:
+  - poetry shell
+
+- window_name: app
+  start_directory: ~/projects/djconeu2021/stackopenflow-app
+  panes:
+  - ls
+
+- window_name: bigga
+  start_directory: ~/projects/djconeu2021/bigga
+  panes:
+  - ls
+
+- window_name: notes
+  start_directory: ~/projects/djconeu2021/notes
+  panes:
+  - ls
+
+- window_name: bash
+  start_directory: ~/projects/djconeu2021/
+  panes:
+  - ls

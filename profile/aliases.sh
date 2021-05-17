@@ -23,6 +23,7 @@ alias c='xclip -select c'
 alias chat='firefox https://app.slack.com/client/T85P1VD8U/C86PZ86BZ'
 alias d="docker"
 alias das='tmuxp load das'
+alias djeu='tmuxp load djeu'
 alias dc="docker-compose"
 alias dm="docker-machine"
 alias e="nvim"
