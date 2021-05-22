@@ -1,4 +1,4 @@
-session_name: 'DjConEU2021'
+session_name: 'DjConEU'
 
 windows:
 
@@ -16,7 +16,7 @@ windows:
   panes:
   - cd stackopenflow-api && poetry run ./manage.py runserver
   - cd stackopenflow-api && poetry run celery -A stackopenflow worker -l debug
-  - cd stackopenflow-app && y relay
+  - cd stackopenflow-app && y r --watch
   - cd stackopenflow-app && y s
 
 - window_name: api
@@ -25,7 +25,7 @@ windows:
   - poetry shell
 
 - window_name: app
-  start_directory: ~/projects/djconeu2021/stackopenflow-app
+  start_directory: ~/projects/djconeu2021/stackopenflow-app/src
   panes:
   - ls
 

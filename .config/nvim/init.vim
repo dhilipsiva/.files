@@ -17,7 +17,6 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_setColors = 0
 let g:jsx_ext_required = 0
 let g:mkdp_path_to_chrome = "chromium" " Open Markdown preview in chromium
-let g:prettier#autoformat_require_pragma = 0
 let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
 let g:pymode_rope = 0
 let g:pymode_rope_lookup_project = 0
@@ -50,7 +49,7 @@ autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufWritePost *.go GoBuild
 autocmd BufWritePost *.py call Flake8()
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
-autocmd BufWritePre *.js,*.ts,*.tsx Prettier
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx Neoformat prettier
 autocmd BufWritePre *.py execute ':Black'
 
 au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss,*.scm,*.toml setl tabstop=2 shiftwidth=2 expandtab
@@ -87,15 +86,17 @@ Plug 'junegunn/goyo.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'majutsushi/tagbar'
 Plug 'mg979/vim-visual-multi'
+Plug 'mlaursen/vim-react-snippets'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'nvie/vim-flake8'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'prettier/vim-prettier', {'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-Plug 'psf/black', { 'branch': 'stable' }
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'psf/black'
 Plug 'rust-lang/rust.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
