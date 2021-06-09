@@ -8,8 +8,30 @@
 [github]
     user = dhilipsiva
 
-[diff]
-    tool = vimdiff
+# [diff]
+#     tool = vimdiff
+
+# [diff]
+#     tool = delta
+
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+
 
 [alias]
     # View abbreviated SHA, description, and history graph of the latest 20 commits

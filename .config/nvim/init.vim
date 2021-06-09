@@ -76,6 +76,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'epilande/vim-react-snippets'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fisadev/vim-isort'
 Plug 'honza/vim-snippets'
@@ -92,7 +93,6 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'nvie/vim-flake8'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'psf/black'
 Plug 'rust-lang/rust.vim'
 Plug 'ryanoasis/vim-devicons'
