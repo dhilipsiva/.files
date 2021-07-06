@@ -21,16 +21,19 @@ let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
 let g:pymode_rope = 0
 let g:pymode_rope_lookup_project = 0
 let g:pymode_virtualenv = 1
+" let g:racer_cmd = "~/.cargo/bin/racer"
 let g:ropevim_vim_completion=0
 let g:rustfmt_autosave = 1
 let g:sneak#label = 1 " Show labels while using sneak
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': ['javascript'], 'passive_filetypes': [] }
+let g:vim_json_syntax_conceal = 0
 
 
 syntax on
 nmap <F8> :TagbarToggle<CR>
 cabbr <expr> %% expand('%:p:h')
 
+set hidden
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -52,15 +55,25 @@ autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx Neoformat prettier
 autocmd BufWritePre *.py execute ':Black'
 
-au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss,*.scm,*.toml setl tabstop=2 shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss,*.scm,*.toml,*.json setl tabstop=2 shiftwidth=2 expandtab
 au BufNewFile,BufReadPost *.emblem,*.haml,*.py,*.coffee,*.jade set foldmethod=indent
 au BufNewFile,BufReadPost *.html,*.c setl tabstop=4 shiftwidth=4 expandtab
 
+augroup Racer
+    autocmd!
+    autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
+    autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
+    autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
+    autocmd FileType rust nmap <buffer> gt         <Plug>(rust-def-tab)
+    autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
+    autocmd FileType rust nmap <buffer> <leader>gD <Plug>(rust-doc-tab)
+augroup END
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/MatchTagAlways'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -76,6 +89,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'elzr/vim-json'
 Plug 'epilande/vim-react-snippets'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fisadev/vim-isort'
@@ -94,6 +108,7 @@ Plug 'nvie/vim-flake8'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'psf/black'
+Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sbdchd/neoformat'
@@ -107,13 +122,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'wakatime/vim-wakatime'
 Plug 'wellle/targets.vim'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 
 " Trigger configuration (Optional)
 " let g:UltiSnipsExpandTrigger="<C-l>"
