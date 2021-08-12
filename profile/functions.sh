@@ -66,3 +66,7 @@ function wmx () {
  # Clear watchman inotify error messages
   echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_instances && watchman shutdown-server
 }
+
+function clash_royale (){
+    echo "i=1; while [ \$i -le 2 ] ; do input tap 151 1452; sleep 3; input tap 518 1777; sleep 3; done"
+}
