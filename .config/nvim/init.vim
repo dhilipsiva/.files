@@ -72,6 +72,7 @@ augroup END
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
+Plug 'LhKipp/nvim-nu', {'do': ':TSInstall nu'}
 Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
@@ -106,6 +107,7 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'nvie/vim-flake8'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'psf/black'
