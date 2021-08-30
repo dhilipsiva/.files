@@ -1,5 +1,5 @@
 shell:
-  program: /home/linuxbrew/.linuxbrew/bin/nu
+  program: /home/linuxbrew/.linuxbrew/bin/bash
   # args:
   # - --login
 font:
