@@ -7,10 +7,7 @@
     "terminal.integrated.fontSize": 18,
     "workbench.colorTheme": "Visual Studio Dark",
     "explorer.confirmDragAndDrop": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ]
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    }
 }
