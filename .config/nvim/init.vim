@@ -48,6 +48,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,.git/*,*/node_modules/*,*/bower_c
 
 autocmd BufNewFile,BufRead *.cap   set syntax=ruby
 autocmd BufNewFile,BufRead *.json,Pipfile.lock set syntax=javascript
+autocmd BufNewFile,BufRead *.dockerfile set syntax=dockerfile
 autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufWritePost *.go GoBuild
 autocmd BufWritePost *.py call Flake8()
@@ -81,6 +82,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag'
+Plug 'artur-shaik/vim-javacomplete2'
 Plug 'cespare/vim-toml'
 Plug 'deoplete-plugins/deoplete-dictionary'
 Plug 'deoplete-plugins/deoplete-docker'
@@ -94,6 +96,7 @@ Plug 'elzr/vim-json'
 Plug 'epilande/vim-react-snippets'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fisadev/vim-isort'
+Plug 'hashivim/vim-terraform'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jparise/vim-graphql'
@@ -119,6 +122,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'slashmili/alchemist.vim'
+Plug 'solarnz/thrift.vim'
 Plug 'suzuki11109/robot.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
