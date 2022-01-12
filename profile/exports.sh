@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/libs:/home/linuxbrew/.linuxbrew/opt/python@3.8/lib
 export NVM_DIR="$HOME/.nvm"
-export PATH="/home/dhilipsiva/.cargo/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="$HOME/.cargo/bin:/home/linuxbrew/.linuxbrew/bin:$PATH"
 export PIPENV_VENV_IN_PROJECT=1
 export PYTHONBREAKPOINT=ipdb.set_trace
 export SHELL="/home/linuxbrew/.linuxbrew/bin/bash"
@@ -20,6 +20,7 @@ export PATH=$USER_BIN:$PATH
 export STARSHIP_CONFIG=$DOTFILES_DIR/starship.toml
 export TMUXP_CONFIGDIR=$DOTFILES_DIR/.tmuxp
 export XDG_CONFIG_HOME=$DOTFILES_DIR/.config
+export ZELLIJ_CONFIG_DIR=$XDG_CONFIG_HOME/zellij/config.yaml
 
 # 2dn Degree Derivatives (Depends on 1st Degree variables)
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
