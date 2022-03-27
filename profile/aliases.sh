@@ -55,6 +55,7 @@ alias sn="shutdown now"
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"  # View HTTP traffic
 alias sudo='sudo '  # Enable aliases to be sudo’ed
 alias t="tmux"
+alias tf="terraform"
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'  # Stopwatch
 alias unite='tmuxp load unite'
 alias v="amixer sset 'IEC958' volume"

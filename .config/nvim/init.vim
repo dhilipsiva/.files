@@ -1,5 +1,6 @@
 " Declarations\
 "let g:syntastic_disabled_filetypes=['python']
+" let g:racer_cmd = "~/.cargo/bin/racer"
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDTreeIgnore = ['\.pyc$']
@@ -11,6 +12,7 @@ let g:airline_powerline_fonts = 1 " Vim devicons for powerline
 let g:airline_theme='onedark'
 let g:deoplete#enable_at_startup = 1 " Start deoplete at startup
 let g:deoplete#sources#jedi#enable_typeinfo = 0
+let g:flake8_cmd="/home/dhilipsiva/.pyenv/shims/flake8p"
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -21,7 +23,6 @@ let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
 let g:pymode_rope = 0
 let g:pymode_rope_lookup_project = 0
 let g:pymode_virtualenv = 1
-" let g:racer_cmd = "~/.cargo/bin/racer"
 let g:ropevim_vim_completion=0
 let g:rustfmt_autosave = 1
 let g:sneak#label = 1 " Show labels while using sneak
@@ -51,9 +52,9 @@ autocmd BufNewFile,BufRead *.json,Pipfile.lock set syntax=javascript
 autocmd BufNewFile,BufRead *.dockerfile set syntax=dockerfile
 autocmd BufNewFile,BufRead Pipfile set filetype=toml
 autocmd BufWritePost *.go GoBuild
-autocmd BufWritePost *.py call Flake8()
 autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx Neoformat prettier
+autocmd BufWritePost *.py call Flake8()
 autocmd BufWritePre *.py execute ':Black'
 
 au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss,*.scm,*.toml,*.json setl tabstop=2 shiftwidth=2 expandtab
@@ -110,6 +111,7 @@ Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'nvie/vim-flake8'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'osohq/polar.vim'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'psf/black'

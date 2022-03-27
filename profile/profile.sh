@@ -1,5 +1,9 @@
 [[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 source ~/.files/profile/exports.sh
 source ~/.files/profile/aliases.sh
 source ~/.files/profile/functions.sh
@@ -72,3 +76,4 @@ source $(brew --prefix autoenv)/activate.sh
 eval "$(starship init bash)"
 eval "$(gh completion -s bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(pyenv init -)"
