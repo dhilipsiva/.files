@@ -5,11 +5,17 @@ icons = "awesome"
 block = "disk_space"
 path = "/"
 info_type = "used"
-format = "{icon} {used}/{total} ({available} free)"
+format = "{icon} {available} free"
 alert_absolute = true
 unit = "GB"
-alert = 50
-warning = 40
+alert = 20
+warning = 10
+interval = 60
+
+[[block]]
+block = "battery"
+if_command = "test -e /sys/class/power_supply/BAT0"
+interval = 10
 
 [[block]]
 block = "cpu"
@@ -17,8 +23,8 @@ interval = 10
 
 [[block]]
 block = "memory"
-format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
-format_swap = "{swap_used}/{swap_total}({swap_used_percents})"
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
 display_type = "memory"
 icons = true
 clickable = true
@@ -29,11 +35,6 @@ critical_mem = 95
 critical_swap = 95
 
 [[block]]
-block = "battery"
-if_command = "test -e /sys/class/power_supply/BAT0"
-interval = 10
-
-[[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R"
+format = "[%A] %m-%d %H:%M"
