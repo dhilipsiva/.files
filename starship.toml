@@ -8,7 +8,7 @@ disabled = true
 disabled = false
 format = "[$time]($style) "
 time_format = '%R'
-utc_time_offset = 5.5
+utc_time_offset = "5.5"
 
 [nodejs]
 disabled = true
