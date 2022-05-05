@@ -48,6 +48,7 @@ alias pos="poetry shell"
 alias q="exit"
 alias reload="exec $SHELL -l"  # Reload the shell (i.e. invoke as a login shell)
 alias rmq="rabbitmq-server"
+alias rt='tmuxp load rt'
 alias s="scheme"
 alias shba="sudo hostscli block-all"
 alias shua="sudo hostscli unblock-all"
