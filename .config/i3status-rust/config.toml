@@ -8,8 +8,8 @@ info_type = "used"
 format = "{icon} {available} free"
 alert_absolute = true
 unit = "GB"
-alert = 20
-warning = 10
+alert = 170
+warning = 165
 interval = 60
 
 [[block]]
@@ -20,6 +20,9 @@ interval = 10
 [[block]]
 block = "cpu"
 interval = 10
+info = 70
+warning = 80
+critical = 90
 
 [[block]]
 block = "memory"

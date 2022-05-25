@@ -1,5 +1,5 @@
 " Declarations\
-"let g:syntastic_disabled_filetypes=['python']
+" let g:syntastic_disabled_filetypes=['python']
 " let g:racer_cmd = "~/.cargo/bin/racer"
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
@@ -12,7 +12,7 @@ let g:airline_powerline_fonts = 1 " Vim devicons for powerline
 let g:airline_theme='onedark'
 let g:deoplete#enable_at_startup = 1 " Start deoplete at startup
 let g:deoplete#sources#jedi#enable_typeinfo = 0
-let g:flake8_cmd="/home/dhilipsiva/.pyenv/shims/flake8p"
+let g:flake8_cmd="pflake8"
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']

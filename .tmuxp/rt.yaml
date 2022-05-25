@@ -9,6 +9,7 @@ windows:
   - rabbitmq-server
   - minio server ~/data/minio
   - MailHog
+  - cd ~/projects/keycloak/keycloak-18.0.0 && bin/kc.sh start-dev --spi-theme-static-max-age=-1 --spi-theme-cache-themes=false --spi-theme-cache-templates=false
 
 - window_name: services
   layout: tiled
