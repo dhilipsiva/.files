@@ -74,6 +74,9 @@ augroup END
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
+
+
+" Trigger configuration (Optional)
 Plug 'LhKipp/nvim-nu', {'do': ':TSInstall nu'}
 Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -96,6 +99,7 @@ Plug 'elzr/vim-json'
 Plug 'epilande/vim-react-snippets'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fisadev/vim-isort'
+Plug 'github/copilot.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
@@ -130,9 +134,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wakatime/vim-wakatime'
 Plug 'wellle/targets.vim'
-
-
-" Trigger configuration (Optional)
 " let g:UltiSnipsExpandTrigger="<C-l>"
 "
 " Initialize plugin system
