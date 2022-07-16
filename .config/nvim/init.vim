@@ -118,6 +118,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'osohq/polar.vim'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'pest-parser/pest.vim'
 Plug 'psf/black'
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
