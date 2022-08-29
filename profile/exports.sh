@@ -14,6 +14,7 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 export SHELL="/home/linuxbrew/.linuxbrew/bin/bash"
 export USER_BIN=$HOME/bin
 export PATH=$HOME/bin/AppFlowy:$PATH
+export PATH=$HOME/bin/firefox:$PATH
 
 # 1st Degree Derivatives (Depends only on Independant vars)
 export PATH=$GOPATH/bin:$PATH

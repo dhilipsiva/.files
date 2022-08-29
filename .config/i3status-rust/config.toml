@@ -1,5 +1,5 @@
-theme = "dracula"
-icons = "awesome"
+# theme = "dracula"
+# icons = "awesome"
 
 [[block]]
 block = "disk_space"
