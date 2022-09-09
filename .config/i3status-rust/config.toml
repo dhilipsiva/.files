@@ -4,18 +4,17 @@
 [[block]]
 block = "disk_space"
 path = "/"
-info_type = "used"
-format = "{icon} {available} free"
-alert_absolute = true
+info_type = "available"
 unit = "GB"
 alert = 170
 warning = 165
 interval = 60
+format = "$available.eng(2)"
 
-[[block]]
-block = "battery"
-if_command = "test -e /sys/class/power_supply/BAT0"
-interval = 10
+# [[block]]
+# block = "battery"
+# if_command = "test -e /sys/class/power_supply/BAT0"
+# interval = 10
 
 [[block]]
 block = "cpu"
@@ -24,11 +23,12 @@ info = 70
 warning = 80
 critical = 90
 
+
 [[block]]
 block = "memory"
-format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
 display_type = "memory"
+format_mem = "$mem_total_used_percents.eng(2)"
+format_swap = "$swap_used_percents.eng(2)"
 icons = true
 clickable = true
 interval = 5
@@ -41,3 +41,5 @@ critical_swap = 95
 block = "time"
 interval = 60
 format = "[%A] %m-%d %H:%M"
+[block.icons_overrides]
+time = ""
