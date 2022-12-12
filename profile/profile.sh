@@ -99,3 +99,5 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+eval "$(fnm env --use-on-cd)"
+source "$HOME/.cargo/env"

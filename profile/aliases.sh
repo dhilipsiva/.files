@@ -15,10 +15,10 @@ fi
 
 # Shortcuts
 
-alias :e="nvim"  # Somtimes I type this thinking that I am inside vim :P
+alias :e="hx"  # Somtimes I type this thinking that I am inside vim :P
 alias :q="exit"
 alias :wq="exit"
-alias be="xargs nvim -p"  # Bulk edit by piping filenames
+alias be="xargs hx -p"  # Bulk edit by piping filenames
 alias c='xclip -select c'
 alias chat='firefox https://app.slack.com/client/T85P1VD8U/C86PZ86BZ'
 alias d="docker"
@@ -26,7 +26,7 @@ alias das='tmuxp load das'
 alias djeu='tmuxp load djeu'
 alias dc="docker-compose"
 alias dm="docker-machine"
-alias e="nvim"
+alias e="hx"
 alias em="ember"
 alias f="fuck"
 alias ff="firefox"
@@ -62,6 +62,7 @@ alias unite='tmuxp load unite'
 alias v="amixer sset 'IEC958' volume"
 alias wk="watchman watch-del-all && watchman shutdown-server"  # Kill watchman and loot things
 alias y="yarn"
+alias z="zellij"
 
 # flatpak aliases
 # alias chromium="flatpak run org.chromium.Chromium"

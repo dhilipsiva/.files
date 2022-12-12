@@ -56,6 +56,7 @@ autocmd BufWritePre * :%s/\s\+$//e "Trim the line endings
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx Neoformat prettier
 autocmd BufWritePost *.py call Flake8()
 autocmd BufWritePre *.py execute ':Black'
+autocmd BufWritePre *.rs execute ':RustFmt'
 
 au BufNewFile,BufReadPost *.coffee,*.rb,*.yml,*.yaml,*.js,*.jsx,*.jade,*.pug,*.scss,*.scm,*.toml,*.json setl tabstop=2 shiftwidth=2 expandtab
 au BufNewFile,BufReadPost *.emblem,*.haml,*.py,*.coffee,*.jade set foldmethod=indent
