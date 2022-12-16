@@ -4,12 +4,12 @@
 [[block]]
 block = "disk_space"
 path = "/"
-info_type = "available"
 unit = "GB"
 alert = 170
 warning = 165
 interval = 60
-format = "$available.eng(2)"
+info_type = "available"
+format = "{available} free"
 
 # [[block]]
 # block = "battery"
@@ -27,8 +27,7 @@ critical = 90
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "$mem_total_used_percents.eng(2)"
-format_swap = "$swap_used_percents.eng(2)"
+format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
 icons = true
 clickable = true
 interval = 5
@@ -38,8 +37,15 @@ critical_mem = 95
 critical_swap = 95
 
 [[block]]
+block = "battery"
+interval = 10
+format = "{percentage} {time}"
+
+[[block]]
 block = "time"
 interval = 60
 format = "[%A] %m-%d %H:%M"
 [block.icons_overrides]
 time = ""
+
+

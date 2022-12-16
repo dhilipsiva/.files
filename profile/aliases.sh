@@ -5,14 +5,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
 
-# Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-    colorflag="--color"
-else # OS X `ls`
-    colorflag="-G"
-fi
-
-
 # Shortcuts
 
 alias :e="hx"  # Somtimes I type this thinking that I am inside vim :P
@@ -36,10 +28,8 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 alias iplocal="ipconfig getifaddr en0"
 alias ippub="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-alias l="ls -F ${colorflag}"  # List all files colorized in long format
-alias la="ls -aF ${colorflag}"  # List all files colorized in long format, including dot files
-alias ll="ls -lahF ${colorflag}"  # List all files with size and colored
-alias lsd="ls -F ${colorflag} | grep --color=never '^d'" # List only directories
+alias l="exa --group-directories-first"
+alias ls="exa --group-directories-first"
 alias map="xargs -n1"  # find . -name .gitattributes | map dirname
 alias os='tmuxp load os'
 alias p="python"

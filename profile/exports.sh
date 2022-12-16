@@ -22,7 +22,7 @@ export PATH=$USER_BIN:$PATH
 export STARSHIP_CONFIG=$DOTFILES_DIR/starship.toml
 export TMUXP_CONFIGDIR=$DOTFILES_DIR/.tmuxp
 export XDG_CONFIG_HOME=$DOTFILES_DIR/.config
-export ZELLIJ_CONFIG_DIR=$XDG_CONFIG_HOME/zellij/config.yaml
+export ZELLIJ_CONFIG_DIR=$XDG_CONFIG_HOME/zellij
 
 # 2dn Degree Derivatives (Depends on 1st Degree variables)
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc

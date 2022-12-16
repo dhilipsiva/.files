@@ -68,5 +68,5 @@ function wmx () {
 }
 
 function clash_royale (){
-    echo "while [ 1 -le 2 ] ; do input tap 151 1497; sleep 1; input tap 513 2094; sleep 1; done"
+    echo "while [ 1 -le 2 ] ; do input tap 251 1469; sleep 1; input tap 505 2142; sleep 1; done"
 }

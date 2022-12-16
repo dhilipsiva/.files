@@ -78,7 +78,8 @@ call plug#begin('~/.vim/plugged')
 
 
 " Trigger configuration (Optional)
-Plug 'LhKipp/nvim-nu', {'do': ':TSInstall nu'}
+" Plug 'wakatime/vim-wakatime'
+Plug 'LnL7/vim-nix'
 Plug 'Quramy/tsuquyomi'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
@@ -98,7 +99,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elzr/vim-json'
 Plug 'epilande/vim-react-snippets'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fisadev/vim-isort'
 Plug 'github/copilot.vim'
 Plug 'hashivim/vim-terraform'
@@ -115,7 +115,7 @@ Plug 'mlaursen/vim-react-snippets'
 Plug 'mxw/vim-jsx'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'nvie/vim-flake8'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'osohq/polar.vim'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
@@ -134,7 +134,6 @@ Plug 'suzuki11109/robot.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'wakatime/vim-wakatime'
 Plug 'wellle/targets.vim'
 " let g:UltiSnipsExpandTrigger="<C-l>"
 "
