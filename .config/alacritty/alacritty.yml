@@ -2,6 +2,13 @@ shell:
   program: /home/linuxbrew/.linuxbrew/bin/bash
   # args:
   # - --login
+
+window:
+    decorations: none
+    padding:
+        x: 2
+        y: 2
+
 font:
   size: 8.0
   normal:
