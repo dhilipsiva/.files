@@ -45,4 +45,3 @@ And finally for this config to take place immedietly, run the following command.
 ```
 xinput set-prop "MSFT0001:00 06CB:7E7E Touchpad" "libinput Tapping Enabled" 1
 ```
-
