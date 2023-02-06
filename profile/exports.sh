@@ -1,6 +1,6 @@
 # independant vars (Depends on static and builtins)
 export DOTFILES_DIR=$HOME/.files
-export EDITOR='nvim'
+export EDITOR='hx'
 export FZF_COMPLETION_OPTS='+c -x'
 export FZF_COMPLETION_TRIGGER='~~'
 export GOPATH=~/go
