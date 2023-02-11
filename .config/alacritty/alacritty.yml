@@ -1,5 +1,5 @@
 shell:
-  program: /home/linuxbrew/.linuxbrew/bin/bash
+  program: /home/dhilipsiva/.cargo/bin/nu
   # args:
   # - --login
 
