@@ -264,7 +264,7 @@ let-env config = {
   }
   history: {
     max_size: 10000 # Session has to be reloaded for this to take effect
-    sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
+    sync_on_enter: false # Enable to share history between multiple sessions, else you have to close the session to write history to file
     file_format: "plaintext" # "sqlite" or "plaintext"
   }
   completions: {
@@ -293,10 +293,10 @@ let-env config = {
   show_banner: false # true or false to enable or disable the banner
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
   hooks: {
-    pre_prompt: [{
+    pre_prompt: [{ ||
       $nothing  # replace with source code to run before the prompt is shown
     }]
-    pre_execution: [{
+    pre_execution: [{ ||
       $nothing  # replace with source code to run before the repl input is run
     }]
     env_change: {
@@ -304,7 +304,7 @@ let-env config = {
         $nothing  # replace with source code to run if the PWD environment is different since the last repl input
       }]
     }
-    display_output: {
+    display_output: { ||
       if (term size).columns >= 100 { table -e } else { table }
     }
   }

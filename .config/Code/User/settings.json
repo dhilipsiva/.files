@@ -9,5 +9,8 @@
     "explorer.confirmDragAndDrop": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "[python]": {
+        "editor.formatOnType": true
     }
 }

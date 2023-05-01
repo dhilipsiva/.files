@@ -1,33 +1,37 @@
 # Nushell Environment Config File
+let-env STARSHIP_SHELL = "nu"
+let-env STARSHIP_SESSION_KEY = (random chars -l 16)
+let-env PROMPT_MULTILINE_INDICATOR = (^/home/linuxbrew/.linuxbrew/bin/starship prompt --continuation)
 
-def create_left_prompt [] {
-    let path_segment = if (is-admin) {
-        $"(ansi red_bold)($env.PWD)"
-    } else {
-        $"(ansi green_bold)($env.PWD)"
-    }
+# Does not play well with default character module.
+# TODO: Also Use starship vi mode indicators?
+let-env PROMPT_INDICATOR = ""
 
-    $path_segment
+let-env PROMPT_COMMAND = { ||
+    # jobs are not supported
+    let width = (term size).columns
+    ^/home/linuxbrew/.linuxbrew/bin/starship prompt $"--cmd-duration=($env.CMD_DURATION_MS)" $"--status=($env.LAST_EXIT_CODE)" $"--terminal-width=($width)"
 }
 
-def create_right_prompt [] {
-    let time_segment = ([
-        (date now | date format '%m/%d/%Y %r')
-    ] | str join)
+# Whether we have config items
+let has_config_items = (not ($env | get -i config | is-empty))
 
-    $time_segment
+let-env config = if $has_config_items {
+    $env.config | upsert render_right_prompt_on_last_line true
+} else {
+    {render_right_prompt_on_last_line: true}
 }
 
-# Use nushell functions to define your right and left prompt
-let-env PROMPT_COMMAND = { create_left_prompt }
-let-env PROMPT_COMMAND_RIGHT = { create_right_prompt }
-
+let-env PROMPT_COMMAND_RIGHT = { ||
+    let width = (term size).columns
+    ^/home/linuxbrew/.linuxbrew/bin/starship prompt --right $"--cmd-duration=($env.CMD_DURATION_MS)" $"--status=($env.LAST_EXIT_CODE)" $"--terminal-width=($width)"
+}
+    
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
-let-env PROMPT_INDICATOR = { "〉" }
-let-env PROMPT_INDICATOR_VI_INSERT = { ": " }
-let-env PROMPT_INDICATOR_VI_NORMAL = { "〉" }
-let-env PROMPT_MULTILINE_INDICATOR = { "::: " }
+let-env PROMPT_INDICATOR_VI_INSERT = { || ": " }
+let-env PROMPT_INDICATOR_VI_NORMAL = { || "〉" }
+let-env PROMPT_MULTILINE_INDICATOR = { || "::: " }
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
