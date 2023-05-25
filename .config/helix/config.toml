@@ -7,3 +7,9 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
