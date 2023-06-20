@@ -4,7 +4,7 @@
 [[block]]
 block = "disk_space"
 path = "/"
-unit = "GB"
+alert_unit = "GB"
 alert = 170
 warning = 165
 interval = 60
@@ -18,18 +18,11 @@ format = "{available} free"
 
 [[block]]
 block = "cpu"
-interval = 10
-info = 70
-warning = 80
-critical = 90
 
 
 [[block]]
 block = "memory"
-display_type = "memory"
-format_mem = "{mem_used}/{mem_total}({mem_used_percents})"
-icons = true
-clickable = true
+format = " $icon $mem_total_used_percents.eng(w:2) "
 interval = 5
 warning_mem = 80
 warning_swap = 80
