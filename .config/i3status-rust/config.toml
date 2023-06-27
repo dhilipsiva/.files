@@ -1,44 +1,37 @@
-# theme = "dracula"
-# icons = "awesome"
-
 [[block]]
-block = "disk_space"
-path = "/"
-alert_unit = "GB"
-alert = 170
-warning = 165
 interval = 60
+block = "disk_space"
 info_type = "available"
-format = "{available} free"
-
-# [[block]]
-# block = "battery"
-# if_command = "test -e /sys/class/power_supply/BAT0"
-# interval = 10
+alert_unit = "GB"
+alert = 10.0
+warning = 15.0
+format = " $icon $available "
 
 [[block]]
 block = "cpu"
-
+interval = 10
+format = " $icon $utilization "
 
 [[block]]
+interval = 60
 block = "memory"
 format = " $icon $mem_total_used_percents.eng(w:2) "
-interval = 5
 warning_mem = 80
 warning_swap = 80
 critical_mem = 95
 critical_swap = 95
 
 [[block]]
+interval = 60
 block = "battery"
-interval = 10
-format = "{percentage} {time}"
+format = " $icon $percentage {$time |}"
+device = "DisplayDevice"
+driver = "upower"
+missing_format = ""
 
 [[block]]
 block = "time"
-interval = 60
-format = "[%A] %m-%d %H:%M"
-[block.icons_overrides]
-time = ""
-
-
+interval = 30
+[block.format]
+full = " $icon $timestamp.datetime(f:'%a %Y-%m-%d %R %Z', l:fr_BE) "
+short = " $icon $timestamp.datetime(f:%R) "
