@@ -12,5 +12,7 @@
     },
     "[python]": {
         "editor.formatOnType": true
-    }
+    },
+    "window.zoomLevel": 4,
+    "editor.inlineSuggest.enabled": true
 }
