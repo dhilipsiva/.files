@@ -251,7 +251,7 @@ $env.config = {
     always_trash: false # always act as if -t was given. Can be overridden with -p
   }
   cd: {
-    abbreviations: true # allows `cd s/o/f` to expand to `cd some/other/folder`
+    # abbreviations: true # allows `cd s/o/f` to expand to `cd some/other/folder`
   }
   table: {
     mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
@@ -294,14 +294,14 @@ $env.config = {
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
   hooks: {
     pre_prompt: [{ ||
-      $nothing  # replace with source code to run before the prompt is shown
+      null  # replace with source code to run before the prompt is shown
     }]
     pre_execution: [{ ||
-      $nothing  # replace with source code to run before the repl input is run
+      null  # replace with source code to run before the repl input is run
     }]
     env_change: {
       PWD: [{|before, after|
-        $nothing  # replace with source code to run if the PWD environment is different since the last repl input
+        null  # replace with source code to run if the PWD environment is different since the last repl input
       }]
     }
     display_output: { ||
