@@ -1,7 +1,7 @@
 shell:
-  program: /home/dhilipsiva/.cargo/bin/nu
-  # args:
-  # - --login
+  program: /home/linuxbrew/.linuxbrew/bin/bash
+  args:
+  - --login
 
 window:
     decorations: none
@@ -10,9 +10,9 @@ window:
         y: 2
 
 font:
-  size: 14.0
+  size: 12.0
   normal:
-    family: 'Fira Code'
+    family: 'FiraCode Nerd Font Mono'
 
 colors:
   # Default colors
