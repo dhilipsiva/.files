@@ -100,3 +100,6 @@ else
 fi
 eval "$(fnm env --use-on-cd)"
 source "$HOME/.cargo/env"
+
+source ~/.fzf.bash
+source "$HOME/.rye/env"

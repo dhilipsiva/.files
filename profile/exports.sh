@@ -14,6 +14,8 @@ export SHELL="/home/linuxbrew/.linuxbrew/bin/bash"
 export USER_BIN=$HOME/bin
 export PATH=$HOME/bin/AppFlowy:$PATH
 export PATH=$HOME/bin/firefox:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/projects/system/depot_tools:$PATH
 
 # 1st Degree Derivatives (Depends only on Independant vars)
 export PATH=$GOPATH/bin:$PATH
@@ -26,3 +28,8 @@ export ZELLIJ_CONFIG_DIR=$XDG_CONFIG_HOME/zellij
 # 2dn Degree Derivatives (Depends on 1st Degree variables)
 export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
 export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

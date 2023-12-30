@@ -17,3 +17,4 @@ alias sudo='sudo '  # Enable aliases to be sudo’ed
 alias t="tmux"
 alias y="yarn"
 alias z="zellij"
+alias docker-desktop="systemctl --user start docker-desktop"
