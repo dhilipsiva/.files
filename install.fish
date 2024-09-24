@@ -8,8 +8,8 @@ set dst_dir "/home/dhilipsiva/.config"
 for dir in $src_dir/*
     set dirname (basename $dir)
     set target $dst_dir/$dirname
-    rm -rf $target
-    ln -s $dir $target
+    # rm -rf $target
+    ln -s $dir $dst_dir
     echo "Symlink created: $dir -> $target"
 end
 
