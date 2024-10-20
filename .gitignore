@@ -103,3 +103,4 @@ ENV/
 .config
 .tmuxp/*
 .env
+result/*
