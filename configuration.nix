@@ -61,7 +61,7 @@
     timers."backup-nix-config" = {
       wantedBy = [ "timers.target" ];
       timerConfig = {
-        OnCalendar = "*-*-* *:*:00";  
+        OnCalendar = "*-*-* *:00:00";  
         Persistent = true;              
       };
     };
@@ -133,19 +133,19 @@
       docker
       firefox
       fish
-      fnm
       git
       gnupg
       google-chrome
       helix
       libinput
       microsoft-edge
+      openconnect
       openssh
       python3
       ripgrep
       rofi-wayland
       rustup
-      rye
+      # rye
       starship
       swayidle
       swaylock
@@ -167,6 +167,7 @@
 
   virtualisation.docker = {
     enable = true;
+    enableOnBoot = false;
   };
 }
 
