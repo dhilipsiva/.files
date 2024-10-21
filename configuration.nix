@@ -75,6 +75,7 @@
   
   services = {
     syslogd.enable = true;
+    timesyncd.enable = true;
     cron = {
       enable = true;
       # logToSyslog = true;  # Enables logging to syslog

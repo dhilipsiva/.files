@@ -6,7 +6,7 @@
 
 bar swaybar_command waybar
 
-# font Fira Code 20
+# font "Fira Code" 20
 
 ### Variables
 #
