@@ -11,20 +11,8 @@
      "sway/workspaces": {
          "disable-scroll": true,
          "disable-markup" : false,
-         "all-outputs": true,
-         "format": "  {icon}  ",
-         //"format":"{icon}",
-         "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "10": "",
-             "4": "",
-             "5": "",
-             "focused": "",
-             "default": ""
-         }
-     },
+         "all-outputs": true
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -37,7 +25,7 @@
     },
     "tray": {
         "icon-size": 21,
-        "spacing": 10
+        "spacing": 5
     },
     "clock": {
         "tooltip-format": "{:%Y-%m-%d | %H:%M}",
@@ -82,16 +70,5 @@
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠",
         "interval" : 7
-    },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
     }
 }
