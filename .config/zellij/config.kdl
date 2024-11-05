@@ -402,3 +402,8 @@ plugins {
     strider { path "strider"; }
     compact-bar { path "compact-bar"; }
 }
+
+layout {
+    disable_status_bar
+}
+

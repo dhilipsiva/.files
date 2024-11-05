@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   imports = [
     ./hardware-configuration.nix
   ];
@@ -26,6 +25,7 @@
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = [ config.boot.kernelPackages.bbswitch ];
   };
 
   swapDevices = [];
@@ -55,14 +55,21 @@
     waybar = {
       enable = true;
     };
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        # Add any missing dynamic libraries for unpackaged programs
+        # here, NOT in environment.systemPackages
+      ];
+    };
   };
 
   systemd = {
     timers."backup-nix-config" = {
       wantedBy = [ "timers.target" ];
       timerConfig = {
-        OnCalendar = "*-*-* *:00:00";  
-        Persistent = true;              
+        OnCalendar = "*-*-* *:00:00";
+        Persistent = true;
       };
     };
 
@@ -73,9 +80,12 @@
     };
   };
   
+  time.timeZone = "Asia/Kolkata";
+
   services = {
     syslogd.enable = true;
     timesyncd.enable = true;
+    # automatic-timezoned.enable = true;
     cron = {
       enable = true;
       # logToSyslog = true;  # Enables logging to syslog
@@ -112,6 +122,9 @@
       powerManagement.enable = true;
       prime.offload.enable = true;
     };
+    nvidiaOptimus = {
+      disable = true;
+    };
   };
 
   networking = {
@@ -129,30 +142,36 @@
     systemPackages = with pkgs; [
       alacritty
       atuin
+      awscli2
+      bottom
       copilot-cli
       discord
       docker
       firefox
       fish
+      gcc
       git
+      gnumake
       gnupg
       google-chrome
       helix
       libinput
       microsoft-edge
+      nodejs_20
+      nodePackages.aws-cdk
       openconnect
       openssh
       python3
       ripgrep
       rofi-wayland
       rustup
-      # rye
+      rye
       starship
       swayidle
       swaylock
       vscode
       waybar
-      zellij 
+      zellij
     ];
     variables = {
       EDITOR = "hx";
@@ -171,4 +190,3 @@
     enableOnBoot = false;
   };
 }
-
