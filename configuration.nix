@@ -169,7 +169,9 @@
       starship
       swayidle
       swaylock
+      taskwarrior3
       vscode
+      watchman
       waybar
       zellij
     ];
