@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
   ];
-
+  
   nixpkgs.config = {
     allowUnfree = true;
   };
@@ -36,31 +36,29 @@
       isNormalUser = true;
       extraGroups = [ "wheel" "docker" "networkmanager" ];
       hashedPassword = "$6$3TFqdE8hE9Hr9RS.$vd5EFAbzbHXn9qdQRRYtuwHyauBv/m1j.qe7LMo5tmz7KKhRZ1Fao8rS3BNPcS6f0yE4cOFHvf8ofcjzzkT671";
-      shell = pkgs.fish;
+      # shell = pkgs.fish;
       createHome = true;
     };
   };
 
   programs = {
-    fish = {
-      enable = true;
-      interactiveShellInit = "eval $(starship init fish)";
-    };
-    sway = {
-      enable = true;
+    bash = {
+      # enable = true;
+      promptInit = "eval $(starship init bash)";
+      interactiveShellInit = "eval $(atuin init bash)";
     };
     gnupg.agent = {
       enable = true;
+      enableSSHSupport = true;
     };
     waybar = {
       enable = true;
     };
-    nix-ld = {
+    hyprland = {
       enable = true;
-      libraries = with pkgs; [
-        # Add any missing dynamic libraries for unpackaged programs
-        # here, NOT in environment.systemPackages
-      ];
+    };
+    hyprlock = {
+      enable = true;
     };
   };
 
@@ -85,30 +83,29 @@
   services = {
     syslogd.enable = true;
     timesyncd.enable = true;
-    # automatic-timezoned.enable = true;
     cron = {
       enable = true;
-      # logToSyslog = true;  # Enables logging to syslog
     };
     xserver = {
       enable = false;
     };
-    displayManager = {
+
+    gnome.gnome-keyring = {
       enable = true;
-      # defaultSession = "lightdm";
-      sddm = {
-        enable = true;
-        wayland = {
-          enable = true;
-          # compositor = "sway";
-        };
-      };
     };
+    hypridle = {
+      enable = true;
+    };
+    displayManager = {
+      enable = false;
+    };
+    
     pipewire = {
       enable = true;
       alsa.enable = true;
       pulse.enable = true;
     };
+
     resolved = {
       enable = true;
     };
@@ -151,10 +148,14 @@
       fish
       gcc
       git
+      gnome.gnome-keyring
+      gnome.seahorse
       gnumake
       gnupg
       google-chrome
       helix
+      infisical
+      lemurs
       libinput
       microsoft-edge
       nodejs_20
@@ -167,12 +168,10 @@
       rustup
       rye
       starship
-      swayidle
-      swaylock
+      # steam
       taskwarrior3
       vscode
       watchman
-      waybar
       zellij
     ];
     variables = {
